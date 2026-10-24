@@ -1,0 +1,16 @@
+{
+  "name": "the-secret-ingredient",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A playful icebreaker: answer casual questions, discover your spice blend, reveal your signature dish.",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "node --test tests/engine.test.js",
+    "test:e2e": "python3 tests/e2e.py http://localhost:8000/index.html",
+    "simulate": "node tests/simulate.js 6000",
+    "calibrate": "node scripts/calibrate.js",
+    "recipe-book": "node scripts/recipe-book.js",
+    "bundle": "node scripts/bundle.mjs"
+  },
+  "license": "UNLICENSED"
+}

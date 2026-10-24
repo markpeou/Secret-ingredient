@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Secret Ingredient</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="A playful icebreaker: answer a few questions, discover your blend, reveal your dish.">
+  <meta name="theme-color" content="#FFE3EA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="hud">
+    <div class="hud-inner">
+      <p class="logo"><span class="logo-the">The</span> Secret Ingredient</p>
+      <div class="hud-progress" id="hud-progress" aria-hidden="true"></div>
+    </div>
+  </header>
+  <main id="app" class="app" aria-live="off">
+    <noscript><p class="card">This game needs JavaScript turned on.</p></noscript>
+  </main>
+
+  <script src="js/data/questions.js"></script>
+  <script src="js/data/spices.js"></script>
+  <script src="js/data/dishes.js"></script>
+  <script src="js/data/calibration.js"></script>
+  <script src="js/engine/narrative.js"></script>
+  <script src="js/engine/scoring.js"></script>
+  <script src="js/ui/art.js"></script>
+  <script src="js/ui/characters.js"></script>
+  <script src="js/ui/card.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

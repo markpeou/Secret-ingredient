@@ -1,0 +1,5 @@
+node_modules/
+shots/
+.DS_Store
+# Built for the claude.ai artifact viewer only
+dist/artifact.html
