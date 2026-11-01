@@ -130,11 +130,11 @@
       art: { type: 'katori' }
     },
     {
-      id: 'vindaloo', name: 'Pork vindaloo', origin: 'Goa, India', flag: '🇮🇳',
+      id: 'vindaloo', name: 'Vindaloo', origin: 'Goa, India', flag: '🇮🇳',
       subtitle: 'Fiery, fearless and sharper than it looks.',
       spices: { chilli: 0.3, cumin: 0.15, blackpepper: 0.15, mustard: 0.1, cloves: 0.1, cinnamon: 0.1, turmeric: 0.1 },
       story: 'Vindaloo has a reputation, but it’s more than heat. Vinegar, garlic and warm spices give it a tangy depth that rewards anyone brave enough to dig in.',
-      art: { type: 'bowl', broth: '#A8321C', noodles: false, toppings: ['stewBeef', 'potato', 'chilli', 'stewBeef', 'curryLeaf'] }
+      art: { type: 'kadai' }
     },
 
     /* ---------- Middle East & Africa ---------- */

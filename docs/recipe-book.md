@@ -31,7 +31,7 @@ So the blend always makes culinary sense for the dish, and two people with the s
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Cinnamon** | Warmth & connection ×3, Playfulness & fun ×1, Stability & practicality ×1 | warm, affectionate and comforting | Phở, Bánh mì, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Butter chicken, Biryani, Pork vindaloo, Chicken shawarma, Moroccan tagine, Sholeh zard, Koshari, Moussaka, Cinnamon buns, Mole poblano, Churros & chocolate, Jerk chicken, Pumpkin pie |
+| **Cinnamon** | Warmth & connection ×3, Playfulness & fun ×1, Stability & practicality ×1 | warm, affectionate and comforting | Phở, Bánh mì, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Butter chicken, Biryani, Vindaloo, Chicken shawarma, Moroccan tagine, Sholeh zard, Koshari, Moussaka, Cinnamon buns, Mole poblano, Churros & chocolate, Jerk chicken, Pumpkin pie |
 
 ### Seed & pod
 
@@ -39,10 +39,10 @@ So the blend always makes culinary sense for the dish, and two people with the s
 |---|---|---|---|
 | **Cardamom** | Independence & space ×3, Noticing & reflecting ×2 | thoughtful, independent and quietly distinctive | Phở, Massaman curry, Butter chicken, Biryani, Doro wat, Sholeh zard, Cinnamon buns |
 | **Coriander seed** | Adaptability & spontaneity ×2, Warmth & connection ×1, Stability & practicality ×1 | bright, easy-going and friendly | Phở, Thai green curry, Curry laksa, Beef rendang, Butter chicken, Sambar, Chicken shawarma, Moroccan tagine, Doro wat, Koshari, Merguez & harissa |
-| **Cumin** | Stability & practicality ×3, Determination & intensity ×1 | grounded, practical and reliable | Thai green curry, Curry laksa, Massaman curry, Butter chicken, Biryani, Sambar, Pork vindaloo, Chicken shawarma, Shakshuka, Moroccan tagine, Lahmacun, Koshari, Merguez & harissa, Tacos al pastor, Empanadas |
+| **Cumin** | Stability & practicality ×3, Determination & intensity ×1 | grounded, practical and reliable | Thai green curry, Curry laksa, Massaman curry, Butter chicken, Biryani, Sambar, Vindaloo, Chicken shawarma, Shakshuka, Moroccan tagine, Lahmacun, Koshari, Merguez & harissa, Tacos al pastor, Empanadas |
 | **Fennel seed** | Independence & space ×2, Warmth & connection ×1, Adaptability & spontaneity ×1 | gentle, soothing and quietly sweet | Bánh mì, Curry laksa, Sichuan hot pot, Five-spice duck, Lasagne, Provençal roast chicken, Pizza diavola |
 | **Fenugreek** | Noticing & reflecting ×2, Stability & practicality ×2 | deep, bittersweet and loyal | Butter chicken, Sambar, Doro wat |
-| **Mustard seed** | Energy & action ×2, Determination & intensity ×1, Playfulness & fun ×1 | zippy, quick and full of pep | Sambar, Pork vindaloo, Steak au poivre, Bratwurst & sauerkraut, Welsh rarebit |
+| **Mustard seed** | Energy & action ×2, Determination & intensity ×1, Playfulness & fun ×1 | zippy, quick and full of pep | Sambar, Vindaloo, Steak au poivre, Bratwurst & sauerkraut, Welsh rarebit |
 | **Nutmeg** | Warmth & connection ×2, Stability & practicality ×1, Independence & space ×1 | cosy, nostalgic and gently warm | Massaman curry, Suya, Saffron risotto, Lasagne, Bratwurst & sauerkraut, Moussaka, Lavender crème brûlée, Jerk chicken, Pumpkin pie |
 | **Sesame** | Warmth & connection ×2, Energy & action ×1, Adaptability & spontaneity ×1 | sociable, nutty and good company | Ramen with chilli oil, Bibimbap, Bulgogi, Mole poblano |
 | **Caraway** | Stability & practicality ×2, Noticing & reflecting ×1, Independence & space ×1 | traditional, earthy and dependable | Merguez & harissa, Goulash, Bratwurst & sauerkraut |
@@ -51,10 +51,10 @@ So the blend always makes culinary sense for the dish, and two people with the s
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Black pepper** | Determination & intensity ×2, Noticing & reflecting ×1, Stability & practicality ×1 | direct, sharp-witted and decisive | Bánh mì, Thai green curry, Pad Thai, Bibimbap, Larb, Bulgogi, Biryani, Pork vindaloo, Shakshuka, Jollof rice, Fattoush, Saffron risotto, Lasagne, Paella, Provençal roast chicken, Steak au poivre, Goulash, Bratwurst & sauerkraut, Pizza diavola, Moussaka, Welsh rarebit, Tacos al pastor, Mole poblano, Jerk chicken, Jambalaya, Ceviche |
+| **Black pepper** | Determination & intensity ×2, Noticing & reflecting ×1, Stability & practicality ×1 | direct, sharp-witted and decisive | Bánh mì, Thai green curry, Pad Thai, Bibimbap, Larb, Bulgogi, Biryani, Vindaloo, Shakshuka, Jollof rice, Fattoush, Saffron risotto, Lasagne, Paella, Provençal roast chicken, Steak au poivre, Goulash, Bratwurst & sauerkraut, Pizza diavola, Moussaka, Welsh rarebit, Tacos al pastor, Mole poblano, Jerk chicken, Jambalaya, Ceviche |
 | **Pink peppercorn** | Playfulness & fun ×3, Warmth & connection ×1, Adaptability & spontaneity ×1 | playful, charming and a little mischievous | Steak au poivre |
 | **Allspice** | Adaptability & spontaneity ×2, Curiosity & novelty ×1, Warmth & connection ×1, Playfulness & fun ×1 | versatile, generous and hard to pin down | Chicken shawarma, Lahmacun, Moussaka, Tacos al pastor, Mole poblano, Jerk chicken, Pumpkin pie |
-| **Chilli** | Determination & intensity ×3, Energy & action ×2, Playfulness & fun ×1 | bold, intense and quietly competitive | Bánh mì, Thai green curry, Pad Thai, Curry laksa, Beef rendang, Ramen with chilli oil, Bibimbap, Sichuan hot pot, Larb, Butter chicken, Sambar, Pork vindaloo, Shakshuka, Doro wat, Jollof rice, Fattoush, Lahmacun, Koshari, Merguez & harissa, Suya, Pizza diavola, Welsh rarebit, Tacos al pastor, Mole poblano, Churros & chocolate, Jerk chicken, Jambalaya, Ceviche, Empanadas |
+| **Chilli** | Determination & intensity ×3, Energy & action ×2, Playfulness & fun ×1 | bold, intense and quietly competitive | Bánh mì, Thai green curry, Pad Thai, Curry laksa, Beef rendang, Ramen with chilli oil, Bibimbap, Sichuan hot pot, Larb, Butter chicken, Sambar, Vindaloo, Shakshuka, Doro wat, Jollof rice, Fattoush, Lahmacun, Koshari, Merguez & harissa, Suya, Pizza diavola, Welsh rarebit, Tacos al pastor, Mole poblano, Churros & chocolate, Jerk chicken, Jambalaya, Ceviche, Empanadas |
 | **Paprika** | Playfulness & fun ×2, Energy & action ×2, Warmth & connection ×1 | vibrant, smoky and full of colour | Chicken shawarma, Shakshuka, Jollof rice, Lahmacun, Suya, Paella, Goulash, Pizza diavola, Jambalaya, Empanadas |
 | **Star anise** | Curiosity & novelty ×2, Independence & space ×1, Playfulness & fun ×1, Noticing & reflecting ×1 | unconventional, imaginative and intriguing | Phở, Bánh mì, Beef rendang, Ramen with chilli oil, Sichuan hot pot, Five-spice duck |
 | **Vanilla** | Stability & practicality ×2, Warmth & connection ×2, Noticing & reflecting ×1 | sweet, comforting and underrated | Lavender crème brûlée, Cinnamon buns, Churros & chocolate |
@@ -66,7 +66,7 @@ So the blend always makes culinary sense for the dish, and two people with the s
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Cloves** | Determination & intensity ×2, Independence & space ×1, Noticing & reflecting ×1 | intense, potent and small but mighty | Phở, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Butter chicken, Biryani, Pork vindaloo, Doro wat, Tacos al pastor, Mole poblano, Pumpkin pie |
+| **Cloves** | Determination & intensity ×2, Independence & space ×1, Noticing & reflecting ×1 | intense, potent and small but mighty | Phở, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Butter chicken, Biryani, Vindaloo, Doro wat, Tacos al pastor, Mole poblano, Pumpkin pie |
 | **Saffron** | Noticing & reflecting ×3, Warmth & connection ×1, Curiosity & novelty ×1 | perceptive, refined and creative | Biryani, Moroccan tagine, Sholeh zard, Saffron risotto, Paella |
 | **Lavender** | Independence & space ×2, Adaptability & spontaneity ×2 | dreamy, calm and a little romantic | Provençal roast chicken, Lavender crème brûlée |
 
@@ -75,7 +75,7 @@ So the blend always makes culinary sense for the dish, and two people with the s
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
 | **Ginger** | Energy & action ×3, Curiosity & novelty ×2, Adaptability & spontaneity ×1 | energetic, adventurous and resilient | Phở, Ramen with chilli oil, Bibimbap, Bulgogi, Moroccan tagine, Doro wat, Jollof rice, Suya, Jerk chicken, Pumpkin pie, Ceviche |
-| **Turmeric** | Adaptability & spontaneity ×3, Determination & intensity ×1, Energy & action ×1 | adaptable, resilient and purposeful | Curry laksa, Beef rendang, Pork vindaloo, Chicken shawarma, Moroccan tagine, Jollof rice |
+| **Turmeric** | Adaptability & spontaneity ×3, Determination & intensity ×1, Energy & action ×1 | adaptable, resilient and purposeful | Curry laksa, Beef rendang, Vindaloo, Chicken shawarma, Moroccan tagine, Jollof rice |
 | **Galangal** | Curiosity & novelty ×2, Determination & intensity ×2 | daring, sharp and pioneering | Thai green curry, Curry laksa, Beef rendang, Larb |
 
 ## Dishes
@@ -100,7 +100,7 @@ Share of players is from 6,000 simulated players. Offset is the small calibratio
 | **Butter chicken** | India | Fenugreek 20%, Chilli 20%, Cardamom 15%, Cumin 15%, Coriander seed 10%, Cinnamon 10%, Cloves 10% | 1.9% | -0.01 |
 | **Biryani** | India | Saffron 20%, Cardamom 20%, Cinnamon 15%, Cloves 15%, Cumin 15%, Black pepper 15% | 2.4% | -0.43 |
 | **Sambar** | South India | Tamarind 25%, Mustard seed 20%, Coriander seed 15%, Fenugreek 15%, Chilli 15%, Cumin 10% | 2.1% | 0.46 |
-| **Pork vindaloo** | Goa, India | Chilli 30%, Cumin 15%, Black pepper 15%, Mustard seed 10%, Cloves 10%, Cinnamon 10%, Turmeric 10% | 1.8% | -0.17 |
+| **Vindaloo** | Goa, India | Chilli 30%, Cumin 15%, Black pepper 15%, Mustard seed 10%, Cloves 10%, Cinnamon 10%, Turmeric 10% | 1.8% | -0.17 |
 | **Chicken shawarma** | The Levant | Cumin 20%, Paprika 20%, Coriander seed 15%, Allspice 15%, Cinnamon 10%, Sumac 10%, Turmeric 10% | 1.7% | -0.13 |
 | **Shakshuka** | North Africa | Paprika 35%, Cumin 30%, Chilli 20%, Black pepper 15% | 1.8% | 0.56 |
 | **Moroccan tagine** | Morocco | Cumin 20%, Cinnamon 20%, Ginger 15%, Turmeric 15%, Saffron 15%, Coriander seed 15% | 2.3% | 0.18 |
