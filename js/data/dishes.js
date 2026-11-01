@@ -85,6 +85,27 @@
       story: 'Five-spice duck keeps people guessing. Sweet, savoury and aromatic, with a flavour that’s hard to pin down and easy to remember.',
       art: { type: 'plate', style: 'duck', toppings: ['spring', 'staranise'] }
     },
+    {
+      id: 'larb', name: 'Larb', origin: 'Laos', flag: '🇱🇦',
+      subtitle: 'Zesty, punchy and refreshingly direct.',
+      spices: { chilli: 0.4, galangal: 0.35, blackpepper: 0.25 },
+      story: 'Larb is all bright edges: minced meat tossed with lime, toasted rice, chilli and a fistful of mint, scooped up in crisp lettuce. No fuss, all flavour.',
+      art: { type: 'plate', style: 'larb' }
+    },
+    {
+      id: 'massaman', name: 'Massaman curry', origin: 'Thailand', flag: '🇹🇭',
+      subtitle: 'Mellow, worldly and generous with its warmth.',
+      spices: { cardamom: 0.25, cinnamon: 0.2, tamarind: 0.2, cumin: 0.15, cloves: 0.1, nutmeg: 0.1 },
+      story: 'Massaman is a well-travelled curry, borrowing warm spices from distant trade routes and settling them into coconut, potato and peanuts. Gentle, rich and easy to love.',
+      art: { type: 'bowl', broth: '#C27A2C', noodles: false, toppings: ['potato', 'chicken', 'peanut', 'friedOnion', 'potato'] }
+    },
+    {
+      id: 'bulgogi', name: 'Bulgogi', origin: 'Korea', flag: '🇰🇷',
+      subtitle: 'Sweet-natured, sociable and quietly smouldering.',
+      spices: { sesame: 0.45, ginger: 0.3, blackpepper: 0.25 },
+      story: 'Bulgogi is marinated beef grilled at the table while everyone talks over it. Sweet, smoky and toasty with sesame, it’s as much about the gathering as the food.',
+      art: { type: 'plate', style: 'bulgogi' }
+    },
 
     /* ---------- South Asia ---------- */
     {
@@ -107,6 +128,13 @@
       spices: { tamarind: 0.25, mustard: 0.2, coriander: 0.15, fenugreek: 0.15, chilli: 0.15, cumin: 0.1 },
       story: 'Sambar is an everyday comfort that’s anything but plain: tangy tamarind, lentils and vegetables, finished with mustard seeds popping in hot oil.',
       art: { type: 'bowl', broth: '#C8742E', noodles: false, toppings: ['carrot', 'drumstick', 'curryLeaf', 'mustardSeeds', 'okra'] }
+    },
+    {
+      id: 'vindaloo', name: 'Pork vindaloo', origin: 'Goa, India', flag: '🇮🇳',
+      subtitle: 'Fiery, fearless and sharper than it looks.',
+      spices: { chilli: 0.3, cumin: 0.15, blackpepper: 0.15, mustard: 0.1, cloves: 0.1, cinnamon: 0.1, turmeric: 0.1 },
+      story: 'Vindaloo has a reputation, but it’s more than heat. Vinegar, garlic and warm spices give it a tangy depth that rewards anyone brave enough to dig in.',
+      art: { type: 'bowl', broth: '#A8321C', noodles: false, toppings: ['stewBeef', 'potato', 'chilli', 'stewBeef', 'curryLeaf'] }
     },
 
     /* ---------- Middle East & Africa ---------- */
@@ -144,6 +172,48 @@
       spices: { chilli: 0.3, paprika: 0.25, ginger: 0.2, turmeric: 0.15, blackpepper: 0.1 },
       story: 'Jollof rice is the centrepiece of every celebration, rich with tomato and pepper. Everyone has an opinion on whose is best, and that’s half the fun.',
       art: { type: 'plate', style: 'jollof' }
+    },
+    {
+      id: 'fattoush', name: 'Fattoush', origin: 'Lebanon', flag: '🇱🇧',
+      subtitle: 'Fresh, zingy and full of crunch.',
+      spices: { sumac: 0.55, blackpepper: 0.25, chilli: 0.2 },
+      story: 'Fattoush is a salad that makes leftovers exciting: crisp vegetables, toasted pita and a lemony dressing, all dusted with tart, ruby-red sumac.',
+      art: { type: 'bowl', cold: true, broth: '#8CC152', noodles: false, toppings: ['tomato', 'pita', 'cucumber', 'mint', 'sumac'] }
+    },
+    {
+      id: 'lahmacun', name: 'Lahmacun', origin: 'Turkey', flag: '🇹🇷',
+      subtitle: 'Quick-witted, crisp and always on the move.',
+      spices: { chilli: 0.3, paprika: 0.2, cumin: 0.2, sumac: 0.2, allspice: 0.1 },
+      story: 'Lahmacun is a paper-thin flatbread topped with spiced mince, baked fast and hot. Squeeze over lemon, pile on herbs, roll it up and keep walking.',
+      art: { type: 'flatbread' }
+    },
+    {
+      id: 'sholehzard', name: 'Sholeh zard', origin: 'Iran', flag: '🇮🇷',
+      subtitle: 'Golden, graceful and quietly radiant.',
+      spices: { saffron: 0.45, cardamom: 0.3, cinnamon: 0.25 },
+      story: 'Sholeh zard is a saffron rice pudding scented with rosewater and cardamom, decorated with cinnamon patterns and nuts. It’s made to share at celebrations.',
+      art: { type: 'bowl', cold: true, broth: '#F6C445', noodles: false, toppings: ['cinnamonLines', 'pistachio', 'almond', 'pistachio'] }
+    },
+    {
+      id: 'koshari', name: 'Koshari', origin: 'Egypt', flag: '🇪🇬',
+      subtitle: 'Resourceful, hearty and a little chaotic.',
+      spices: { cumin: 0.4, coriander: 0.25, chilli: 0.2, cinnamon: 0.15 },
+      story: 'Koshari throws rice, lentils, pasta and chickpeas together, then crowns them with spiced tomato sauce and crispy onions. It shouldn’t work. It absolutely does.',
+      art: { type: 'bowl', broth: '#B8461E', noodles: false, toppings: ['friedOnion', 'chickpeas', 'macaroni', 'friedOnion', 'chickpeas'] }
+    },
+    {
+      id: 'merguez', name: 'Merguez & harissa', origin: 'Tunisia', flag: '🇹🇳',
+      subtitle: 'Smoky, spirited and never boring.',
+      spices: { chilli: 0.35, caraway: 0.25, coriander: 0.2, cumin: 0.2 },
+      story: 'Merguez are slim, spicy sausages that hiss on the grill. Pair them with a spoonful of harissa, fiery with chilli and caraway, and the table wakes right up.',
+      art: { type: 'plate', style: 'merguez' }
+    },
+    {
+      id: 'suya', name: 'Suya', origin: 'Nigeria', flag: '🇳🇬',
+      subtitle: 'Bold, nocturnal and the reason everyone stays out late.',
+      spices: { chilli: 0.4, ginger: 0.3, paprika: 0.2, nutmeg: 0.1 },
+      story: 'Suya is street food at its best: skewers of beef rolled in a fiery peanut spice and grilled over open flames, served late at night with raw onion and tomato.',
+      art: { type: 'plate', style: 'skewers' }
     },
 
     /* ---------- Europe ---------- */
@@ -197,6 +267,34 @@
       art: { type: 'plate', style: 'bratwurst' }
     },
     {
+      id: 'pizza', name: 'Pizza diavola', origin: 'Italy', flag: '🇮🇹',
+      subtitle: 'Fun-loving, crowd-pleasing and a little devilish.',
+      spices: { chilli: 0.4, fennel: 0.3, blackpepper: 0.15, paprika: 0.15 },
+      story: 'Pizza diavola is the ‘devil’s pizza’: blistered crust, spicy salami and a shake of chilli flakes. Everyone grabs a slice, and nobody stops at one.',
+      art: { type: 'pizza' }
+    },
+    {
+      id: 'moussaka', name: 'Moussaka', origin: 'Greece', flag: '🇬🇷',
+      subtitle: 'Comforting, layered and made with love.',
+      spices: { cinnamon: 0.35, nutmeg: 0.25, allspice: 0.2, blackpepper: 0.2 },
+      story: 'Moussaka layers silky aubergine and cinnamon-spiced meat under a thick blanket of golden béchamel. It takes an afternoon to make and seconds to disappear.',
+      art: { type: 'lasagne', stripes: ['#6B3F7A', '#A8401E', '#F2C14E', '#6B3F7A', '#A8401E', '#FFF6E6'], top: '#F0C35A', spots: '#C07A2A', side: '#E8B85A', garnish: 'herbs' }
+    },
+    {
+      id: 'rarebit', name: 'Welsh rarebit', origin: 'Wales, UK', flag: '🇬🇧',
+      subtitle: 'Cheeky, cosy and sharper than you’d expect.',
+      spices: { mustard: 0.45, blackpepper: 0.3, chilli: 0.25 },
+      story: 'Welsh rarebit is cheese on toast that went to finishing school: a molten sauce sharpened with mustard and a pinch of cayenne, grilled until bubbling.',
+      art: { type: 'plate', style: 'toast' }
+    },
+    {
+      id: 'brulee', name: 'Lavender crème brûlée', origin: 'France', flag: '🇫🇷',
+      subtitle: 'Elegant, playful and delightfully crackable.',
+      spices: { vanilla: 0.6, lavender: 0.3, nutmeg: 0.1 },
+      story: 'Crème brûlée hides a soft, vanilla-scented heart under a glassy sugar crust. The best part is the first tap of the spoon.',
+      art: { type: 'ramekin' }
+    },
+    {
       id: 'kanelbullar', name: 'Cinnamon buns', origin: 'Sweden', flag: '🇸🇪',
       subtitle: 'Sweet, cosy and made for sharing.',
       spices: { cinnamon: 0.5, cardamom: 0.35, vanilla: 0.15 },
@@ -239,6 +337,27 @@
       spices: { cinnamon: 0.4, nutmeg: 0.2, ginger: 0.2, cloves: 0.1, allspice: 0.1 },
       story: 'Pumpkin pie is a dish for gatherings. It smells like autumn, tastes like home and always disappears faster than expected.',
       art: { type: 'pie' }
+    },
+    {
+      id: 'jambalaya', name: 'Jambalaya', origin: 'Louisiana, USA', flag: '🇺🇸',
+      subtitle: 'Loud, lively and always up for a party.',
+      spices: { paprika: 0.4, chilli: 0.3, blackpepper: 0.3 },
+      story: 'Jambalaya is a one-pot celebration of rice, sausage, prawns and peppers, cooked down with Cajun spice. It’s made in big batches because more people always turn up.',
+      art: { type: 'plate', base: '#D2692E', style: 'rice', toppings: ['prawn', 'sausage', 'pepperStrip', 'sausage', 'chives'] }
+    },
+    {
+      id: 'ceviche', name: 'Ceviche', origin: 'Peru', flag: '🇵🇪',
+      subtitle: 'Bright, quick and impossible to ignore.',
+      spices: { chilli: 0.5, ginger: 0.25, blackpepper: 0.25 },
+      story: 'Ceviche is “cooked” in minutes by lime alone: raw fish, ají chilli, red onion and a zingy leche de tigre. Fresh, sharp and gone before you know it.',
+      art: { type: 'bowl', cold: true, broth: '#F3EEDC', noodles: false, toppings: ['fish', 'redOnion', 'fish', 'chilli', 'lime'] }
+    },
+    {
+      id: 'empanadas', name: 'Empanadas', origin: 'Argentina', flag: '🇦🇷',
+      subtitle: 'Warm, dependable and full of surprises.',
+      spices: { cumin: 0.35, paprika: 0.35, chilli: 0.3 },
+      story: 'Empanadas are little parcels of comfort: crimped pastry around spiced beef, egg and olives. Everyone has a family recipe, and they’re all the best one.',
+      art: { type: 'empanadas' }
     }
   ];
 })(globalThis.SI = globalThis.SI || {});
