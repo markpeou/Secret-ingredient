@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>The Secret Ingredient</title>
+  <title>Spice To Know Ya</title>
   <meta name="claude:viewport-fit-sides" content="cover">
   <meta name="description" content="A playful icebreaker: answer a few questions, discover your blend, reveal your dish.">
   <meta name="theme-color" content="#FFE3EA">
@@ -81,7 +81,7 @@ button { font: inherit; color: inherit; }
   font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; color: #FFFFFF; letter-spacing: 0.01em; white-space: nowrap;
   text-shadow: 2px 2px 0 var(--ink), -2px 2px 0 var(--ink), 2px -2px 0 var(--ink), -2px -2px 0 var(--ink), 0 3px 0 var(--ink);
 }
-.logo-the { color: var(--yellow); }
+.logo-accent { color: var(--yellow); }
 body[data-screen="question"] .logo { font-size: 1rem; }
 .hud-inner { flex-wrap: nowrap; }
 .hud-progress { flex: none; }
@@ -525,7 +525,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
 <body>
   <header class="hud">
     <div class="hud-inner">
-      <p class="logo"><span class="logo-the">The</span> Secret Ingredient</p>
+      <p class="logo"><span class="logo-accent">Spice</span> To Know Ya</p>
       <div class="hud-progress" id="hud-progress" aria-hidden="true"></div>
     </div>
   </header>
@@ -1396,7 +1396,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
   function shareText(result) {
     const t = result.text;
     const mix = result.blend.map((b) => b.pct + '% ' + b.spice.name).join(', ');
-    return 'My secret ingredient blend is ' + t.name + ' (' + mix + '). My signature dish: ' + result.dish.name + '. ' +
+    return 'My Spice To Know Ya blend is ' + t.name + ' (' + mix + '). My signature dish: ' + result.dish.name + '. ' +
       result.dish.subtitle + ' What dish would you be?';
   }
 
@@ -2713,7 +2713,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     font(g, 800, 13, BODY); g.fillStyle = INK_SOFT; g.textAlign = 'left';
     g.fillText(label, 52, 1014);
     font(g, 600, 15, DISPLAY); g.fillStyle = PINK; g.textAlign = 'center';
-    g.fillText('The Secret Ingredient', W / 2, 1015);
+    g.fillText('Spice To Know Ya', W / 2, 1015);
     font(g, 800, 13, BODY); g.fillStyle = INK_SOFT; g.textAlign = 'right';
     const num = `No. ${String(card.number).padStart(2, '0')}/${card.total}`;
     g.fillText(num, W - 52 - (card.rarity * 16 + 6), 1014);
@@ -2971,7 +2971,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
 
   function filename(result, side = 'front') {
     const slug = result.dish.name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    return `secret-ingredient-${slug}-${side}.png`;
+    return `spice-to-know-ya-${slug}-${side}.png`;
   }
 
   SI.card = { render, filename, W, H };
@@ -2991,7 +2991,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
   const { pip, spice: spiceArt } = SI.chars;
 
   const problems = SI.engine.validateContent();
-  if (problems.length) console.warn('[Secret Ingredient] content problems:', problems);
+  if (problems.length) console.warn('[Spice To Know Ya] content problems:', problems);
 
   /* Pipi reacts to each answer. The reaction follows the answer's strongest hidden
      signal, but the lines never name a trait, so nothing about the scoring leaks. */
@@ -3413,7 +3413,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
         if (state.result === forResult) { state.card = { ...c, result: forResult }; showCard(); }
         else { URL.revokeObjectURL(c.front.url); URL.revokeObjectURL(c.back.url); }
       },
-      (err) => { console.warn('[Secret Ingredient] card render failed', err); if (state.result === forResult) { state.card = { error: true, result: forResult }; showCard(); } }
+      (err) => { console.warn('[Spice To Know Ya] card render failed', err); if (state.result === forResult) { state.card = { error: true, result: forResult }; showCard(); } }
     );
     updateCardButtons();
   }
@@ -3463,7 +3463,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     if (!canShareFiles(files)) { saveBoth(); return; }
     sharing = true; updateCardButtons();
     const done = () => { sharing = false; updateCardButtons(); };
-    navigator.share({ files, title: 'The Secret Ingredient', text: state.result.text.share }).then(
+    navigator.share({ files, title: 'Spice To Know Ya', text: state.result.text.share }).then(
       () => { setStatus('Shared! Both sides of your card are on their way.'); done(); },
       (err) => {
         done();

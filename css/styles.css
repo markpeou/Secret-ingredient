@@ -68,7 +68,7 @@ button { font: inherit; color: inherit; }
   font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; color: #FFFFFF; letter-spacing: 0.01em; white-space: nowrap;
   text-shadow: 2px 2px 0 var(--ink), -2px 2px 0 var(--ink), 2px -2px 0 var(--ink), -2px -2px 0 var(--ink), 0 3px 0 var(--ink);
 }
-.logo-the { color: var(--yellow); }
+.logo-accent { color: var(--yellow); }
 body[data-screen="question"] .logo { font-size: 1rem; }
 .hud-inner { flex-wrap: nowrap; }
 .hud-progress { flex: none; }

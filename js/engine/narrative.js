@@ -124,7 +124,7 @@
   function shareText(result) {
     const t = result.text;
     const mix = result.blend.map((b) => b.pct + '% ' + b.spice.name).join(', ');
-    return 'My secret ingredient blend is ' + t.name + ' (' + mix + '). My signature dish: ' + result.dish.name + '. ' +
+    return 'My Spice To Know Ya blend is ' + t.name + ' (' + mix + '). My signature dish: ' + result.dish.name + '. ' +
       result.dish.subtitle + ' What dish would you be?';
   }
 

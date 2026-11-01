@@ -10,7 +10,7 @@
   const { pip, spice: spiceArt } = SI.chars;
 
   const problems = SI.engine.validateContent();
-  if (problems.length) console.warn('[Secret Ingredient] content problems:', problems);
+  if (problems.length) console.warn('[Spice To Know Ya] content problems:', problems);
 
   /* Pipi reacts to each answer. The reaction follows the answer's strongest hidden
      signal, but the lines never name a trait, so nothing about the scoring leaks. */
@@ -432,7 +432,7 @@
         if (state.result === forResult) { state.card = { ...c, result: forResult }; showCard(); }
         else { URL.revokeObjectURL(c.front.url); URL.revokeObjectURL(c.back.url); }
       },
-      (err) => { console.warn('[Secret Ingredient] card render failed', err); if (state.result === forResult) { state.card = { error: true, result: forResult }; showCard(); } }
+      (err) => { console.warn('[Spice To Know Ya] card render failed', err); if (state.result === forResult) { state.card = { error: true, result: forResult }; showCard(); } }
     );
     updateCardButtons();
   }
@@ -482,7 +482,7 @@
     if (!canShareFiles(files)) { saveBoth(); return; }
     sharing = true; updateCardButtons();
     const done = () => { sharing = false; updateCardButtons(); };
-    navigator.share({ files, title: 'The Secret Ingredient', text: state.result.text.share }).then(
+    navigator.share({ files, title: 'Spice To Know Ya', text: state.result.text.share }).then(
       () => { setStatus('Shared! Both sides of your card are on their way.'); done(); },
       (err) => {
         done();

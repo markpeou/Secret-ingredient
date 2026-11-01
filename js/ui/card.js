@@ -164,7 +164,7 @@
     font(g, 800, 13, BODY); g.fillStyle = INK_SOFT; g.textAlign = 'left';
     g.fillText(label, 52, 1014);
     font(g, 600, 15, DISPLAY); g.fillStyle = PINK; g.textAlign = 'center';
-    g.fillText('The Secret Ingredient', W / 2, 1015);
+    g.fillText('Spice To Know Ya', W / 2, 1015);
     font(g, 800, 13, BODY); g.fillStyle = INK_SOFT; g.textAlign = 'right';
     const num = `No. ${String(card.number).padStart(2, '0')}/${card.total}`;
     g.fillText(num, W - 52 - (card.rarity * 16 + 6), 1014);
@@ -422,7 +422,7 @@
 
   function filename(result, side = 'front') {
     const slug = result.dish.name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    return `secret-ingredient-${slug}-${side}.png`;
+    return `spice-to-know-ya-${slug}-${side}.png`;
   }
 
   SI.card = { render, filename, W, H };

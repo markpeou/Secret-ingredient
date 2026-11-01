@@ -1,4 +1,4 @@
-# The Secret Ingredient
+# Spice To Know Ya
 
 A mobile-first icebreaker. Players answer 10 casual questions and get a **signature dish** from around the world, plus a personalised **spice blend** made only from that dish's real spices (3–6 spices, percentages always totalling exactly 100%).
 
@@ -17,7 +17,7 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 
 # 3. Single file
-node scripts/bundle.mjs    # writes dist/secret-ingredient.html, one self-contained file
+node scripts/bundle.mjs    # writes dist/spice-to-know-ya.html, one self-contained file
 ```
 
 To try it on your phone, serve it with option 2 and open `http://<your-computer's-LAN-IP>:8000` on the same Wi-Fi.
