@@ -471,14 +471,21 @@
   }
 
   function flatbread() {
+    // One lahmacun flat, one rolled up around parsley the way it's eaten.
+    const roll = `<g transform="translate(150 100) rotate(-28)">
+      <path d="M-8 -26 Q-14 -40 -2 -42 Q2 -50 10 -42 Q20 -44 16 -30" fill="#5DB044" ${ow(2.2)}/>
+      <rect x="-14" y="-28" width="28" height="70" rx="12" fill="#E8B866" ${O}/>
+      <path d="M-14 -10 Q0 -4 14 -12 M-14 12 Q0 18 14 10" fill="none" stroke="#C88A3E" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M8 -26 Q12 6 8 40" fill="none" stroke="#B8402A" stroke-width="3" stroke-linecap="round"/></g>`;
     return `<ellipse cx="100" cy="166" rx="88" ry="12" fill="${INK}" opacity=".15"/>
-      <ellipse cx="100" cy="132" rx="90" ry="30" fill="#C98A4E" ${O}/>
-      <path d="M22 128 Q24 96 100 92 Q178 96 178 128 Q176 156 100 158 Q24 156 22 128 Z" fill="#E8B866" ${O}/>
-      <path d="M32 126 Q34 102 100 100 Q168 102 168 126 Q166 148 100 150 Q34 148 32 126 Z" fill="#B8402A"/>
-      ${[...Array(30)].map((_, i) => `<circle cx="${40 + (i * 37) % 122}" cy="${104 + (i * 17) % 42}" r="${1.6 + (i % 3) * 0.7}" fill="${['#7A2216', '#D8603E', '#5A1A10'][i % 3]}"/>`).join('')}
-      ${[[44, 112], [150, 140], [160, 112]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="2" fill="#C88A3E"/>`).join('')}
-      ${T.herbs(78, 112)}${T.herbs(122, 132)}${T.redOnion(96, 128)}${T.sumac(140, 114)}
-      ${T.lemon(150, 96, 20)}${T.tomato(60, 136)}`;
+      <rect x="10" y="114" width="180" height="40" rx="18" fill="#C98A4E" ${O}/>
+      <path d="M22 132 L178 132" stroke="#A86A34" stroke-width="2"/>
+      <path d="M14 128 Q16 102 74 100 Q132 102 134 128 Q132 152 74 154 Q16 152 14 128 Z" fill="#E8B866" ${O}/>
+      <path d="M22 127 Q24 108 74 106 Q124 108 126 127 Q124 146 74 148 Q24 146 22 127 Z" fill="#B8402A"/>
+      ${[...Array(24)].map((_, i) => `<circle cx="${28 + (i * 37) % 94}" cy="${110 + (i * 17) % 36}" r="${1.5 + (i % 3) * 0.7}" fill="${['#7A2216', '#D8603E', '#5A1A10'][i % 3]}"/>`).join('')}
+      ${T.herbs(52, 116)}${T.redOnion(84, 132)}${T.sumac(100, 118)}
+      ${roll}
+      ${T.lemon(176, 140, 25)}${T.tomato(40, 142)}`;
   }
 
   function ramekin() {
@@ -511,9 +518,185 @@
       <g ${at(166, 116)}><ellipse rx="14" ry="8" fill="#FFFFFF" ${O}/><ellipse rx="10" ry="5" fill="#4E8F3A"/>${T.flakes(-6, -2)}</g>`;
   }
 
+  /* ---------- Shared bits for the redrawn dishes ---------- */
+  // Clip a straight line to an ellipse so patterns stay on the food surface.
+  function clipToEllipse(x1, y1, x2, y2, cx, cy, rx, ry) {
+    const dx = x2 - x1, dy = y2 - y1, ex = (x1 - cx) / rx, ey = (y1 - cy) / ry, fx = dx / rx, fy = dy / ry;
+    const A = fx * fx + fy * fy, B = 2 * (ex * fx + ey * fy), C = ex * ex + ey * ey - 1, D = B * B - 4 * A * C;
+    if (D <= 0) return '';
+    const t0 = Math.max(0, (-B - Math.sqrt(D)) / (2 * A)), t1 = Math.min(1, (-B + Math.sqrt(D)) / (2 * A));
+    if (t1 <= t0) return '';
+    return `M${(x1 + dx * t0).toFixed(1)} ${(y1 + dy * t0).toFixed(1)} L${(x1 + dx * t1).toFixed(1)} ${(y1 + dy * t1).toFixed(1)}`;
+  }
+  const shadow = (cy, rx, ry = 12) => `<ellipse cx="100" cy="${cy}" rx="${rx}" ry="${ry}" fill="${INK}" opacity=".15"/>`;
+  // A wide, deep coupe plate: rim plus a sunken well.
+  const coupe = (cy = 128, rx = 90, ry = 32) => `${shadow(cy + ry - 4, rx - 4)}
+    <ellipse cx="100" cy="${cy}" rx="${rx}" ry="${ry}" fill="#FFFFFF" ${O}/>
+    <ellipse cx="100" cy="${cy + 2}" rx="${rx - 18}" ry="${ry - 9}" fill="#EEF3F6"/>
+    <path d="M${100 - rx + 18} ${cy + 2} A${rx - 18} ${ry - 9} 0 0 1 ${100 + rx - 18} ${cy + 2}" fill="none" stroke="#D4DEE6" stroke-width="3"/>`;
+  const sweetPotato = (x, y, r = 0) => `<g ${at(x, y, r)}><ellipse rx="14" ry="9" fill="#E0782A" ${ow(2.4)}/><ellipse rx="10" ry="6" fill="#F59A3E"/><ellipse cx="-3" cy="-2" rx="4" ry="1.8" fill="#FFC27A"/></g>`;
+  const choclo = (x, y, r = 0) => `<g ${at(x, y, r)}><rect x="-15" y="-9" width="30" height="18" rx="8" fill="#F4E3A0" ${ow(2.4)}/>
+    ${[-9, -3, 3, 9].map((cx) => [-4, 3].map((cy) => `<ellipse cx="${cx}" cy="${cy}" rx="2.6" ry="2.8" fill="#FFF6CC" stroke="#D9C070" stroke-width="1"/>`).join('')).join('')}</g>`;
+  const cancha = (x, y) => `<g ${at(x, y)}>${[[0, 0, 10], [8, 3, -30], [-7, 4, 50], [4, -5, 80], [12, -2, 20]].map(([cx, cy, r]) => `<ellipse cx="${cx}" cy="${cy}" rx="3.4" ry="2.4" transform="rotate(${r} ${cx} ${cy})" fill="#C8862E" ${ow(1.2)}/>`).join('')}</g>`;
+
+  function ceviche() {
+    // Peruvian style: a deep plate, fish in leche de tigre, red onion on top,
+    // sweet potato and choclo on the side, toasted cancha scattered.
+    const cubes = [[78, 118], [92, 112], [106, 116], [120, 112], [86, 126], [100, 124], [114, 126], [96, 104], [110, 104]];
+    return `${coupe()}
+      <ellipse cx="100" cy="128" rx="58" ry="18" fill="#F6F1E2" opacity=".95"/>
+      ${cubes.map(([x, y], i) => `<g ${at(x, y, (i * 23) % 40 - 20)}><rect x="-7.5" y="-6" width="15" height="12" rx="3.4" fill="#FCF6EE" ${ow(2.2)}/><path d="M-4 -3 Q0 0 -4 3 M1 -3 Q5 0 1 3" fill="none" stroke="#F0CDB8" stroke-width="1.4" stroke-linecap="round"/></g>`).join('')}
+      ${T.redOnion(92, 102)}${T.redOnion(116, 108)}
+      ${T.chilli(78, 106)}${T.herbs(124, 100)}
+      ${sweetPotato(44, 126, -10)}${sweetPotato(52, 140, 8)}
+      ${choclo(156, 132, -12)}
+      ${cancha(138, 146)}${cancha(62, 112)}
+      ${T.lime(160, 112, 15)}`;
+  }
+
+  function fattoush() {
+    // A heaped salad on a flat platter, crowned with pita crisps and a dusting of sumac.
+    const leaf = (x, y, r, c) => `<path transform="translate(${x} ${y}) rotate(${r})" d="M-20 4 Q-22 -10 -6 -12 Q4 -18 14 -10 Q24 -4 18 6 Q4 12 -20 4 Z" fill="${c}" ${ow(2.2)}/>`;
+    const radish = (x, y) => `<g ${at(x, y)}><circle r="7" fill="#D23A6A" ${ow(2)}/><circle r="4.6" fill="#FFF4F6"/></g>`;
+    const halfCuc = (x, y, r) => `<g ${at(x, y, r)}><path d="M-9 0 A9 9 0 0 1 9 0 Z" fill="#4E8F3A" ${ow(2)}/><path d="M-7 0 A7 7 0 0 1 7 0 Z" fill="#DDF0B8"/><circle cx="-2.5" cy="-2.5" r="1" fill="#A8CF7A"/><circle cx="2.5" cy="-2.5" r="1" fill="#A8CF7A"/></g>`;
+    const wedge = (x, y, r) => `<g ${at(x, y, r)}><path d="M-10 4 Q-10 -8 0 -9 Q10 -8 10 4 Z" fill="#E2362E" ${ow(2)}/><path d="M-6 2 Q-6 -5 0 -6 Q6 -5 6 2 Z" fill="#FF8A6E"/><circle cx="-2" cy="-1" r="1.2" fill="#FFE27A"/><circle cx="2" cy="-2" r="1.2" fill="#FFE27A"/></g>`;
+    const chip = (x, y, r) => `<g ${at(x, y, r)}><path d="M-10 6 L0 -10 L10 6 Z" fill="#E8B35E" ${ow(2.2)}/><path d="M-5 3 L0 -5" stroke="#F8D59A" stroke-width="2" stroke-linecap="round"/><circle cx="2" cy="2" r="1.2" fill="#B8722A"/></g>`;
+    return `${shadow(160, 90, 13)}
+      <ellipse cx="100" cy="134" rx="94" ry="28" fill="#FFFFFF" ${O}/>
+      <ellipse cx="100" cy="134" rx="78" ry="20" fill="none" stroke="#8ED3E8" stroke-width="4"/>
+      ${leaf(62, 128, -15, '#7DBF4C')}${leaf(138, 128, 15, '#7DBF4C')}${leaf(100, 132, 0, '#94D05E')}${leaf(80, 116, -30, '#94D05E')}${leaf(122, 116, 30, '#7DBF4C')}
+      ${wedge(72, 122, -15)}${wedge(126, 126, 20)}${halfCuc(102, 124, 0)}${halfCuc(140, 118, 25)}${radish(88, 128)}${radish(116, 112)}
+      ${T.mint(60, 112)}${T.mint(148, 132)}
+      ${chip(96, 104, -10)}${chip(110, 98, 25)}${chip(82, 108, 40)}${chip(132, 106, -30)}
+      ${T.sumac(92, 116)}${T.sumac(118, 120)}${T.sumac(68, 132)}
+      ${T.lemon(40, 140, -20)}`;
+  }
+
+  function koshari() {
+    // Packed in a bowl, turned out onto a plate as a dome, then crowned with
+    // tomato sauce and a big pile of crispy onions. Chickpeas tumble round the base.
+    const grains = [...Array(30)].map((_, i) => { const x = 58 + (i * 37) % 84, y = 104 + (i * 13) % 34; return `<ellipse cx="${x}" cy="${y}" rx="2.6" ry="1.4" transform="rotate(${(i * 41) % 180} ${x} ${y})" fill="${['#FFF6DE', '#7A4A26', '#FFF6DE', '#9A6A3A'][i % 4]}"/>`; }).join('');
+    const mac = (x, y, r) => `<g ${at(x, y, r)}><path d="M-5 2 Q0 -6 5 2" fill="none" stroke="${INK}" stroke-width="6" stroke-linecap="round"/><path d="M-5 2 Q0 -6 5 2" fill="none" stroke="#F6D27A" stroke-width="3.6" stroke-linecap="round"/></g>`;
+    return `${steam()}
+      ${shadow(160, 88, 13)}
+      <ellipse cx="100" cy="138" rx="90" ry="24" fill="#FFFFFF" ${O}/>
+      <ellipse cx="100" cy="138" rx="72" ry="16" fill="none" stroke="#8ED3E8" stroke-width="4"/>
+      <path d="M50 140 Q48 100 100 94 Q152 100 150 140 Q100 152 50 140 Z" fill="#C8A274" ${O}/>
+      ${grains}
+      ${mac(64, 132, 20)}${mac(138, 132, -30)}${mac(80, 140, -10)}${mac(122, 140, 40)}${mac(144, 120, 10)}${mac(58, 118, -40)}
+      <path d="M66 110 Q70 92 100 90 Q130 92 134 110 Q120 104 100 106 Q80 104 66 110 Z" fill="#C8341E" ${O}/>
+      <path d="M76 102 Q90 94 104 96" fill="none" stroke="#F06A4A" stroke-width="3" stroke-linecap="round"/>
+      ${T.friedOnion(86, 90)}${T.friedOnion(100, 84)}${T.friedOnion(110, 92)}${T.friedOnion(92, 96)}
+      ${T.chickpeas(44, 146)}${T.chickpeas(156, 146)}${T.herbs(126, 88)}`;
+  }
+
+  function suya() {
+    // Off the skewer, cut up, dusted with yaji and wrapped in paper with raw onion and tomato.
+    const meat = (x, y, r) => `<g ${at(x, y, r)}><path d="M-11 -6 Q0 -10 11 -5 Q14 2 9 7 Q-2 10 -11 6 Q-14 0 -11 -6 Z" fill="#6E2A14" ${ow(2.2)}/>
+      ${[[-5, -3], [3, -4], [0, 2], [6, 2], [-6, 3], [-1, -1]].map(([cx, cy]) => `<circle cx="${cx}" cy="${cy}" r="1.3" fill="#D8602A"/>`).join('')}</g>`;
+    const ring = (x, y, r, s = 1) => `<g ${at(x, y, r, s)}><ellipse rx="12" ry="7" fill="none" stroke="${INK}" stroke-width="5"/><ellipse rx="12" ry="7" fill="none" stroke="#F6EEF4" stroke-width="3"/><ellipse rx="12" ry="7" fill="none" stroke="#C894B8" stroke-width="1" opacity=".7"/></g>`;
+    const slice = (x, y) => `<g ${at(x, y)}><circle r="9" fill="#E2362E" ${ow(2.2)}/><circle r="6.4" fill="#FF7A62"/>${[0, 72, 144, 216, 288].map((d) => `<ellipse cx="${(3.6 * Math.cos(d * Math.PI / 180)).toFixed(1)}" cy="${(3.6 * Math.sin(d * Math.PI / 180)).toFixed(1)}" rx="1.4" ry="1" fill="#FFE27A"/>`).join('')}</g>`;
+    return `${shadow(162, 86, 11)}
+      <path d="M20 132 L72 92 L184 112 L134 160 Z" fill="#ECE6D8" ${O}/>
+      ${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M${44 + i * 14} ${116 - i * 3} L${70 + i * 14} ${120 - i * 3}" stroke="#B8B0A0" stroke-width="2" stroke-linecap="round"/>`).join('')}
+      <path d="M72 92 L184 112 L176 120 L76 100 Z" fill="#D8D0BE"/>
+      ${meat(84, 120, -10)}${meat(102, 116, 20)}${meat(120, 122, -30)}${meat(94, 132, 10)}${meat(112, 134, -5)}${meat(132, 132, 25)}${meat(104, 126, 45)}
+      ${ring(64, 132, -20)}${ring(146, 120, 15)}${ring(76, 142, 10, 0.8)}
+      ${slice(140, 140)}${slice(156, 132)}
+      <g ${at(56, 112)}><ellipse rx="11" ry="5" fill="#C8461E" ${ow(2)}/>${T.flakes(-6, -3)}</g>
+      ${T.herbs(126, 108)}`;
+  }
+
+  function larb() {
+    // Lao style: a mound of larb with herbs, lettuce on the side and a basket of sticky rice.
+    const lettuce = (x, y, r) => `<g ${at(x, y, r)}><path d="M-22 4 Q-26 -10 -10 -14 Q0 -20 10 -14 Q26 -10 22 4 Q12 10 0 9 Q-12 10 -22 4 Z" fill="#9BD06A" ${ow(2.4)}/>
+      <path d="M-16 -2 Q-6 -9 0 -8 Q8 -9 16 -2" fill="none" stroke="#C9EC98" stroke-width="2.6" stroke-linecap="round"/></g>`;
+    const mince = [...Array(26)].map((_, i) => { const x = 62 + (i * 29) % 64, y = 104 + (i * 11) % 30; return `<circle cx="${x}" cy="${y}" r="${2.6 + (i % 3)}" fill="${['#A8643E', '#C47E52', '#8A4A2C'][i % 3]}" ${ow(1.2)}/>`; }).join('');
+    return `${shadow(162, 88, 12)}
+      <ellipse cx="88" cy="134" rx="80" ry="26" fill="#FFFFFF" ${O}/>
+      <ellipse cx="88" cy="134" rx="64" ry="18" fill="none" stroke="#8ED3E8" stroke-width="4"/>
+      ${lettuce(42, 128, -20)}${lettuce(54, 144, 10)}
+      <path d="M56 130 Q54 102 94 98 Q132 100 132 130 Q94 144 56 130 Z" fill="#B87A50" ${O}/>
+      ${mince}
+      ${[[70, 112], [90, 106], [108, 118], [120, 108], [80, 126], [100, 130]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.6" fill="#F2DDA8"/>`).join('')}
+      ${T.mint(78, 104)}${T.mint(112, 100)}${T.spring(96, 118)}${T.flakes(70, 120)}${T.chilli(120, 120)}
+      ${T.lime(100, 146, 8)}
+      <g transform="translate(162 104)">
+        <path d="M-16 50 L-18 4 Q0 -2 18 4 L16 50 Q0 56 -16 50 Z" fill="#D9A55A" ${O}/>
+        ${[14, 24, 34, 44].map((y) => `<path d="M-17 ${y} Q0 ${y + 4} 17 ${y}" fill="none" stroke="#A8722E" stroke-width="2.4"/>`).join('')}
+        ${[-10, -2, 6, 13].map((x) => `<path d="M${x} 8 L${x} 50" stroke="#B88440" stroke-width="1.6" opacity=".7"/>`).join('')}
+        <path d="M-20 4 Q-20 -18 0 -20 Q20 -18 20 4 Q0 10 -20 4 Z" fill="#E6B86A" ${O}/>
+        <path d="M-12 -6 Q0 -14 12 -6" fill="none" stroke="#F6D89A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M-8 52 L-14 62 M8 52 L14 62" stroke="${INK}" stroke-width="4" stroke-linecap="round"/>
+      </g>`;
+  }
+
+  function sholehzard() {
+    // A shallow dessert dish of saffron pudding with a cinnamon lattice and a nut flower.
+    const cx = 100, cy = 106, rx = 66, ry = 18;
+    const lattice = [];
+    for (let k = -5; k <= 5; k++) {
+      lattice.push(clipToEllipse(cx + k * 18 - 40, cy - 30, cx + k * 18 + 40, cy + 30, cx, cy, rx - 4, ry - 2));
+      lattice.push(clipToEllipse(cx + k * 18 + 40, cy - 30, cx + k * 18 - 40, cy + 30, cx, cy, rx - 4, ry - 2));
+    }
+    const petals = [0, 60, 120, 180, 240, 300].map((d) => { const a = d * Math.PI / 180, x = cx + 9 * Math.cos(a), y = cy + 4 * Math.sin(a); return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="5" ry="2.4" transform="rotate(${d} ${x.toFixed(1)} ${y.toFixed(1)})" fill="#FFF3DC" ${ow(1.3)}/>`; }).join('');
+    return `${shadow(166, 60, 9)}
+      <path d="M78 150 L72 164 L128 164 L122 150 Z" fill="#FFFFFF" ${O}/>
+      <path d="M30 108 Q38 152 100 154 Q162 152 170 108 Z" fill="#FFFFFF" ${O}/>
+      <path d="M44 132 Q100 146 156 132" fill="none" stroke="#2E8FB8" stroke-width="5"/>
+      ${[56, 78, 100, 122, 144].map((x) => `<circle cx="${x}" cy="${x === 100 ? 142 : (x < 100 ? 138 + (x - 56) / 11 : 138 + (144 - x) / 11)}" r="2.4" fill="#2E8FB8"/>`).join('')}
+      <ellipse cx="${cx}" cy="${cy}" rx="72" ry="22" fill="#FFFFFF" ${O}/>
+      <ellipse cx="${cx}" cy="${cy + 1}" rx="${rx}" ry="${ry}" fill="#F6B92E"/>
+      <ellipse cx="${cx - 10}" cy="${cy - 4}" rx="34" ry="6" fill="#FAD066"/>
+      <path d="${lattice.filter(Boolean).join(' ')}" fill="none" stroke="#8A4318" stroke-width="2.2" stroke-linecap="round"/>
+      ${petals}<circle cx="${cx}" cy="${cy}" r="3.4" fill="#8DBF4A" ${ow(1.2)}/>
+      ${[[64, 106], [136, 106]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="3.4" ry="2" fill="#8DBF4A" ${ow(1)}/>`).join('')}`;
+  }
+
+  function handi() {
+    // Butter chicken in a hammered copper handi, with naan alongside.
+    const naan = `<g transform="translate(160 150) rotate(72) scale(0.85)">
+      <path d="M-18 -30 Q6 -38 16 -14 Q24 14 8 32 Q-14 40 -22 14 Q-28 -14 -18 -30 Z" fill="#EFC27A" ${O}/>
+      ${[[-8, -18, 5], [6, -8, 4], [-10, 6, 4.6], [6, 16, 3.6], [-4, 24, 3]].map(([x, y, r]) => `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r * 0.7}" fill="#B8641E" opacity=".8"/>`).join('')}
+      <path d="M-14 -20 Q-2 -28 8 -18" fill="none" stroke="#FBE0A8" stroke-width="3" stroke-linecap="round"/></g>`;
+    return `${steam()}
+      ${shadow(170, 74, 9)}
+      ${naan}
+      <path d="M26 104 Q28 162 92 164 Q156 162 158 104 Z" fill="#C8682E" ${O}/>
+      ${[[48, 128], [64, 146], [88, 152], [112, 148], [134, 132], [56, 112], [130, 114]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3" fill="#E08A4E" opacity=".8"/>`).join('')}
+      <path d="M40 124 Q50 150 76 156" fill="none" stroke="#F2A66A" stroke-width="5" stroke-linecap="round"/>
+      <path d="M14 104 Q8 92 20 92" fill="none" stroke="${INK}" stroke-width="9" stroke-linecap="round"/><path d="M14 104 Q8 92 20 92" fill="none" stroke="#C8682E" stroke-width="5" stroke-linecap="round"/>
+      <path d="M170 104 Q176 92 164 92" fill="none" stroke="${INK}" stroke-width="9" stroke-linecap="round"/><path d="M170 104 Q176 92 164 92" fill="none" stroke="#C8682E" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="92" cy="102" rx="70" ry="20" fill="#D9783A" ${O}/>
+      <ellipse cx="92" cy="104" rx="60" ry="14" fill="#E8762E"/>
+      ${T.chicken(70, 102)}${T.chicken(110, 106)}${T.chicken(94, 96)}
+      <path d="M64 110 q8 -6 16 0 t16 0 t16 0" fill="none" stroke="#FFF6E8" stroke-width="4" stroke-linecap="round"/>
+      ${T.herbs(118, 96)}${T.herbs(78, 92)}
+      ${naan}`;
+  }
+
+  function katori() {
+    // South Indian meal: sambar in a steel bowl on a banana leaf, with idli.
+    const idli = (x, y) => `<g ${at(x, y)}><ellipse cy="4" rx="20" ry="9" fill="#F2EEE4" ${O}/><ellipse rx="20" ry="9" fill="#FFFFFF" ${O}/>
+      ${[[-8, -1], [2, -3], [9, 1], [-2, 3]].map(([cx, cy]) => `<circle cx="${cx}" cy="${cy}" r="1" fill="#E4DCC8"/>`).join('')}</g>`;
+    return `${steam()}
+      ${shadow(166, 90, 11)}
+      <path d="M8 140 Q40 112 100 110 Q170 108 196 128 Q170 162 100 162 Q30 162 8 140 Z" fill="#4FA83C" ${O}/>
+      <path d="M14 140 Q100 128 190 128" fill="none" stroke="#8ED06A" stroke-width="3"/>
+      ${[30, 52, 74, 96, 118, 140, 162].map((x) => `<path d="M${x} ${136 - (x - 14) * 0.05} L${x + 10} ${150 - (x - 14) * 0.02}" stroke="#3E8E2E" stroke-width="1.6"/>`).join('')}
+      ${idli(150, 136)}${idli(164, 122)}
+      <g transform="translate(-14 0)">
+        <path d="M44 104 Q46 150 96 152 Q146 150 148 104 Z" fill="#C8CED6" ${O}/>
+        <path d="M56 128 Q96 140 136 128" fill="none" stroke="#E6EAEE" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="96" cy="104" rx="54" ry="16" fill="#DDE2E8" ${O}/>
+        <ellipse cx="96" cy="106" rx="45" ry="11" fill="#C8742E"/>
+        ${T.drumstick(84, 104)}${T.carrot(110, 108)}${T.curryLeaf(72, 108)}${T.mustardSeeds(98, 100)}${T.okra(120, 102)}
+      </g>`;
+  }
+
   function dish(d) {
     const a = d.art;
-    const draw = { bowl: () => bowl(a), plate: () => plate(a), tacos, tagine, banhmi, hotpot, bibimbap, pan, wrap, injera, lasagne: () => lasagne(a), paella, roast, buns, churros, pie, pizza, flatbread, ramekin, empanadas }[a.type];
+    const draw = { bowl: () => bowl(a), plate: () => plate(a), tacos, tagine, banhmi, hotpot, bibimbap, pan, wrap, injera, lasagne: () => lasagne(a), paella, roast, buns, churros, pie, pizza, flatbread, ramekin, empanadas, ceviche, fattoush, koshari, suya, larb, sholehzard, handi, katori }[a.type];
     if (!draw) throw new Error('No illustration for ' + d.id);
     const body = draw();
     return `<svg class="dish-art" viewBox="0 0 200 190" role="img" aria-label="Illustration of ${d.name.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}" xmlns="http://www.w3.org/2000/svg">${body}</svg>`;

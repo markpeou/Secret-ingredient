@@ -90,7 +90,7 @@
       subtitle: 'Zesty, punchy and refreshingly direct.',
       spices: { chilli: 0.4, galangal: 0.35, blackpepper: 0.25 },
       story: 'Larb is all bright edges: minced meat tossed with lime, toasted rice, chilli and a fistful of mint, scooped up in crisp lettuce. No fuss, all flavour.',
-      art: { type: 'plate', style: 'larb' }
+      art: { type: 'larb' }
     },
     {
       id: 'massaman', name: 'Massaman curry', origin: 'Thailand', flag: '🇹🇭',
@@ -113,7 +113,7 @@
       subtitle: 'Warm, generous and confidently rich.',
       spices: { fenugreek: 0.2, chilli: 0.2, cardamom: 0.15, cumin: 0.15, coriander: 0.1, cinnamon: 0.1, cloves: 0.1 },
       story: 'Butter chicken is a warm hug of a dish. Everyone feels at home around it, and there’s more care in the sauce than first appears.',
-      art: { type: 'bowl', broth: '#E5853A', noodles: false, toppings: ['cream', 'chicken', 'herbs', 'chicken'] }
+      art: { type: 'handi' }
     },
     {
       id: 'biryani', name: 'Biryani', origin: 'India', flag: '🇮🇳',
@@ -127,7 +127,7 @@
       subtitle: 'Tangy, comforting and full of character.',
       spices: { tamarind: 0.25, mustard: 0.2, coriander: 0.15, fenugreek: 0.15, chilli: 0.15, cumin: 0.1 },
       story: 'Sambar is an everyday comfort that’s anything but plain: tangy tamarind, lentils and vegetables, finished with mustard seeds popping in hot oil.',
-      art: { type: 'bowl', broth: '#C8742E', noodles: false, toppings: ['carrot', 'drumstick', 'curryLeaf', 'mustardSeeds', 'okra'] }
+      art: { type: 'katori' }
     },
     {
       id: 'vindaloo', name: 'Pork vindaloo', origin: 'Goa, India', flag: '🇮🇳',
@@ -178,7 +178,7 @@
       subtitle: 'Fresh, zingy and full of crunch.',
       spices: { sumac: 0.55, blackpepper: 0.25, chilli: 0.2 },
       story: 'Fattoush is a salad that makes leftovers exciting: crisp vegetables, toasted pita and a lemony dressing, all dusted with tart, ruby-red sumac.',
-      art: { type: 'bowl', cold: true, broth: '#8CC152', noodles: false, toppings: ['tomato', 'pita', 'cucumber', 'mint', 'sumac'] }
+      art: { type: 'fattoush' }
     },
     {
       id: 'lahmacun', name: 'Lahmacun', origin: 'Turkey', flag: '🇹🇷',
@@ -192,14 +192,14 @@
       subtitle: 'Golden, graceful and quietly radiant.',
       spices: { saffron: 0.45, cardamom: 0.3, cinnamon: 0.25 },
       story: 'Sholeh zard is a saffron rice pudding scented with rosewater and cardamom, decorated with cinnamon patterns and nuts. It’s made to share at celebrations.',
-      art: { type: 'bowl', cold: true, broth: '#F6C445', noodles: false, toppings: ['cinnamonLines', 'pistachio', 'almond', 'pistachio'] }
+      art: { type: 'sholehzard' }
     },
     {
       id: 'koshari', name: 'Koshari', origin: 'Egypt', flag: '🇪🇬',
       subtitle: 'Resourceful, hearty and a little chaotic.',
       spices: { cumin: 0.4, coriander: 0.25, chilli: 0.2, cinnamon: 0.15 },
       story: 'Koshari throws rice, lentils, pasta and chickpeas together, then crowns them with spiced tomato sauce and crispy onions. It shouldn’t work. It absolutely does.',
-      art: { type: 'bowl', broth: '#B8461E', noodles: false, toppings: ['friedOnion', 'chickpeas', 'macaroni', 'friedOnion', 'chickpeas'] }
+      art: { type: 'koshari' }
     },
     {
       id: 'merguez', name: 'Merguez & harissa', origin: 'Tunisia', flag: '🇹🇳',
@@ -213,7 +213,7 @@
       subtitle: 'Bold, nocturnal and the reason everyone stays out late.',
       spices: { chilli: 0.4, ginger: 0.3, paprika: 0.2, nutmeg: 0.1 },
       story: 'Suya is street food at its best: skewers of beef rolled in a fiery peanut spice and grilled over open flames, served late at night with raw onion and tomato.',
-      art: { type: 'plate', style: 'skewers' }
+      art: { type: 'suya' }
     },
 
     /* ---------- Europe ---------- */
@@ -350,7 +350,7 @@
       subtitle: 'Bright, quick and impossible to ignore.',
       spices: { chilli: 0.5, ginger: 0.25, blackpepper: 0.25 },
       story: 'Ceviche is “cooked” in minutes by lime alone: raw fish, ají chilli, red onion and a zingy leche de tigre. Fresh, sharp and gone before you know it.',
-      art: { type: 'bowl', cold: true, broth: '#F3EEDC', noodles: false, toppings: ['fish', 'redOnion', 'fish', 'chilli', 'lime'] }
+      art: { type: 'ceviche' }
     },
     {
       id: 'empanadas', name: 'Empanadas', origin: 'Argentina', flag: '🇦🇷',
