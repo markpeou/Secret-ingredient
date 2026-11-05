@@ -169,6 +169,7 @@ test('every result has a complete, sensible match', () => {
     [m.best, m.clash, ...m.also].forEach((x) => assert.ok(!mine.has(x.spice.id), 'matched with own spice ' + x.spice.id));
     assert.notEqual(m.best.spice.id, m.clash.spice.id);
     assert.ok(m.best.pairing.name && m.best.pairing.line && m.best.pairing.score > 0, 'best pairing ' + m.best.pairing.name);
+    m.also.forEach((x) => assert.ok(x.pairing && x.pairing.name && x.pairing.score > 0, 'also pairing for ' + x.spice.id));
     if (m.clash.tension) assert.ok(m.clash.pairing && m.clash.pairing.score < 0, 'clash pairing');
     else assert.equal(m.clash.pairing, null);
     assert.ok(m.best.score > m.clash.score);

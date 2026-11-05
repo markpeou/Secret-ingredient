@@ -112,8 +112,10 @@ def play(page, rng, keyboard=False, screenshots=False):
     dish = page.inner_text("#h")
     dock_visible(page, "dish")
     # Compatibility: a perfect complement and a clash (or least-like), both naming a spice type
-    expect(page.locator(".matches .match")).to_have_count(2)
+    expect(page.locator(".matches .match")).to_have_count(4)
     assert page.locator(".matches .match-best").count() == 1
+    assert page.locator(".matches .match-good").count() == 2
+    assert page.locator(".matches .match-good .match-pair").count() == 2
     assert page.locator(".matches .match-clash, .matches .match-least").count() == 1
     assert all(t.endswith(" types") or " types " in t for t in page.locator(".matches h3").all_inner_texts())
     page.wait_for_timeout(1500)

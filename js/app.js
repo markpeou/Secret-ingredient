@@ -196,14 +196,14 @@
     const clashRow = c.tension
       ? row('clash', 'Spicy tension', c.spice, c.pairing.name, c.pairing.line)
       : row('least', 'Least like you', c.spice, '', `Not a clash, just very different ingredients. ${c.spice.short || c.spice.name} people are ${c.spice.essence}.`);
-    const also = m.also.map((x) => x.spice.short || x.spice.name);
+    const also = m.also.map((x) => row('good', 'Great match', x.spice, x.pairing.name, x.pairing.line)).join('');
     return `<div class="card matches">
       <h2 class="eyebrow">Who you click with</h2>
       <ul class="match-list">
         ${row('best', 'Perfect complement', b.spice, b.pairing.name, b.pairing.line)}
+        ${also}
         ${clashRow}
       </ul>
-      <p class="match-also">Also gets on with ${esc(also.join(' and '))} types.</p>
     </div>`;
   }
 

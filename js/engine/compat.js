@@ -50,14 +50,19 @@
     return sociability;
   }
 
-  const pairingFrom = (parts, pick) => {
-    const p = parts.reduce((x, y) => (pick === 'max' ? (y.c > x.c ? y : x) : (y.c < x.c ? y : x)));
-    return Object.assign({ key: p.a + '|' + p.b }, cell(p.a, p.b));
+  // The trait pairing that contributes most (or, for clashes, least). `avoid` skips pairings
+  // already shown, so the extra matches don't just repeat the main one's nickname.
+  const pairingFrom = (parts, pick, avoid = new Set()) => {
+    const pool = pick === 'max' ? parts.filter((p) => p.c > 0) : parts;
+    const fresh = pool.filter((p) => !avoid.has(SI.compat.key(p.a, p.b)));
+    const list = fresh.length ? fresh : (pool.length ? pool : parts);
+    const p = list.reduce((x, y) => (pick === 'max' ? (y.c > x.c ? y : x) : (y.c < x.c ? y : x)));
+    return Object.assign({ key: SI.compat.key(p.a, p.b) }, cell(p.a, p.b));
   };
 
   /*
    * best  – your perfect complement, with the trait pairing that makes it work
-   * also  – two more spices you get on with
+   * also  – two more spices you get on with, each with its own pairing
    * clash – the spice you're least alike; `tension` is true when it's a real clash,
    *         in which case `pairing` names the friction behind it
    */
@@ -80,12 +85,19 @@
     const worst = (pool.length ? pool : ranked).slice().sort((x, y) => x.low - y.low || x.order - y.order)[0];
     const tension = worst.score < 0;
     const partsOf = (x) => vectorScore(me, x.spice.vector, true).parts;
+    const bestOut = { spice: best.spice, score: best.score, pairing: pairingFrom(partsOf(best), 'max') };
+    const used = new Set([bestOut.pairing.key]);
     return {
-      best: { spice: best.spice, score: best.score, pairing: pairingFrom(partsOf(best), 'max') },
-      also: ranked.slice(1, 3).map((x) => ({ spice: x.spice, score: x.score })),
+      best: bestOut,
+      also: ranked.slice(1, 3).map((x) => {
+        const pairing = pairingFrom(partsOf(x), 'max', used);
+        used.add(pairing.key);
+        return { spice: x.spice, score: x.score, pairing };
+      }),
       clash: { spice: worst.spice, score: worst.score, tension, pairing: tension ? pairingFrom(partsOf(worst), 'min') : null }
     };
   }
 
-  SI.compat = { cell, vectorScore, blendVector, match };
+  const key = (a, b) => (SI.PAIRINGS[a + '|' + b] ? a + '|' + b : b + '|' + a);
+  SI.compat = { cell, key, vectorScore, blendVector, match };
 })(globalThis.SI = globalThis.SI || {});
