@@ -280,7 +280,7 @@
     spiceBadge(g, imgs.spice(top.id), top.colour, W - 106, 581, 38);
 
     // Trait grid
-    const cells = [['WEAKNESS', card.weakness], ['RESISTS', card.resists], ['RECHARGES WITH', card.recharge], ['CLICKS WITH', card.clicks]];
+    const cells = [['WEAKNESS', card.weakness], ['RECHARGES WITH', card.recharge], ['CLICKS WITH', card.clicks], [card.clash.label, card.clash.value]];
     const gx = 52, gy = 664, cw = (W - 104) / 2, ch = 70;
     rr(g, gx, gy, W - 104, ch * 2, 16); g.fillStyle = '#FFFFFF'; g.fill(); g.lineWidth = 3; g.strokeStyle = INK; g.stroke();
     g.fillStyle = 'rgba(59,30,18,0.18)'; g.fillRect(gx + cw - 1, gy + 10, 2, ch * 2 - 20); g.fillRect(gx + 14, gy + ch - 1, W - 132, 2);

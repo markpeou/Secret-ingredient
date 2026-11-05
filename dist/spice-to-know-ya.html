@@ -350,6 +350,23 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
 .story .lead { font-size: 0.93rem; line-height: 1.4; }
 .mapping { font-size: 0.88rem; line-height: 1.4; color: var(--ink-soft); }
 
+/* ---------- Compatibility ---------- */
+.matches { display: flex; flex-direction: column; gap: 10px; padding-block: 14px; }
+.match-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.match { display: grid; grid-template-columns: 54px 1fr; gap: 12px; align-items: start; padding: 10px; border-radius: 14px; border: 3px solid var(--ink); background: #FFFFFF; }
+.match .spice-plate { width: 54px; height: 54px; background: #FFFFFF; box-shadow: 0 0 0 4px var(--c); }
+.match-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.match-tag { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.match-best .match-tag { color: #2E7D3A; }
+.match-clash .match-tag { color: #C0392B; }
+.match-least .match-tag { color: var(--ink-soft); }
+.match-best { background: #EAF7EC; }
+.match-clash { background: #FDECEA; }
+.match h3 { font-size: 1.1rem; font-weight: 600; line-height: 1.25; }
+.match-pair { display: inline-block; font-size: 0.82rem; font-weight: 600; background: #FFFFFF; border: 2px solid var(--ink); border-radius: 999px; padding: 0 8px; vertical-align: 2px; }
+.match-line { font-size: 0.9rem; line-height: 1.35; }
+.match-also { font-size: 0.88rem; color: var(--ink-soft); }
+
 /* ---------- Card screen ---------- */
 .card-screen .body { gap: 6px; padding-block: 6px 4px; }
 .card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex: none; }
@@ -1381,10 +1398,89 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
 
 </script>
   <script>
+/*
+ * Compatibility chart: how the nine hidden traits get along.
+ * Every unordered pair of traits (45 in all, including a trait with itself) has
+ *
+ *   score – 2 perfect complement, 1 easy, 0 neutral, -1 friction, -2 spicy tension
+ *   name  – the pairing's nickname, shown to players
+ *   line  – one playful sentence about the pair, written to "you two"
+ *
+ * Players never see trait names, only spices, so names and lines avoid them.
+ * Like a horoscope chart, it's for fun: playful, never diagnostic.
+ */
+(function (SI) {
+  SI.PAIRINGS = {
+    /* ---------- Explore ---------- */
+    'explore|explore': { score: 1, name: 'Fellow Adventurers', line: 'You’ll both say yes to the detour. Someone still needs to book the hotel.' },
+    'explore|energy': { score: 1, name: 'Road Trip', line: 'Same direction, same speed, windows down.' },
+    'explore|steady': { score: 2, name: 'Adventurer & Anchor', line: 'One finds the new thing, the other makes it actually happen.' },
+    'explore|warmth': { score: 1, name: 'Tour Guide', line: 'One brings back the stories, the other makes everyone feel part of them.' },
+    'explore|space': { score: 0, name: 'Solo Travellers', line: 'You both love to wander, just not necessarily together.' },
+    'explore|observe': { score: 1, name: 'Field Researchers', line: 'One goes looking, the other notices what you found.' },
+    'explore|drive': { score: 1, name: 'Expedition', line: 'One spots the mountain, the other plans the route up.' },
+    'explore|flow': { score: 1, name: 'Yes, And', line: 'Any plan works for you two, as long as it’s a new one.' },
+    'explore|play': { score: 1, name: 'Mischief Makers', line: 'Curiosity plus cheek. Things are about to get interesting.' },
+
+    /* ---------- Energy ---------- */
+    'energy|energy': { score: 0, name: 'Double Espresso', line: 'Brilliant for an hour. Someone will need a nap.' },
+    'energy|steady': { score: -1, name: 'Spark vs Routine', line: 'One wants to shake things up, the other likes them right where they are.' },
+    'energy|warmth': { score: 1, name: 'Hosts with the Most', line: 'Between you, nobody at the party gets left out.' },
+    'energy|space': { score: -2, name: 'Party vs Recharge', line: 'One wants the party, the other needs a quiet night in.' },
+    'energy|observe': { score: -1, name: 'Stage & Critic', line: 'One’s performing, the other’s quietly taking notes.' },
+    'energy|drive': { score: 0, name: 'Full Throttle', line: 'Unstoppable together, as long as someone remembers to stop.' },
+    'energy|flow': { score: 2, name: 'Spark & Glide', line: 'One gets things going, the other keeps them running smoothly.' },
+    'energy|play': { score: 1, name: 'Party Starters', line: 'Put a song on and you’re both up.' },
+
+    /* ---------- Steady ---------- */
+    'steady|steady': { score: 1, name: 'Old Reliables', line: 'Comfortable, dependable and always on time.' },
+    'steady|warmth': { score: 1, name: 'Home Base', line: 'Together you make any place feel like home.' },
+    'steady|space': { score: 1, name: 'Quiet Sunday', line: 'Comfortable silences and no surprises. Bliss.' },
+    'steady|observe': { score: 1, name: 'Master Planners', line: 'Nothing gets past you two, and nothing gets forgotten.' },
+    'steady|drive': { score: 1, name: 'Builder & Boss', line: 'One sets the goal, the other makes sure it’s built properly.' },
+    'steady|flow': { score: -1, name: 'Plan vs Wing It', line: 'One made a spreadsheet. The other forgot there was a plan.' },
+    'steady|play': { score: -1, name: 'Rules vs Pranks', line: 'One keeps the rules, the other keeps testing them.' },
+
+    /* ---------- Warmth ---------- */
+    'warmth|warmth': { score: 1, name: 'Group Hug', line: 'Kind, caring and probably feeding each other.' },
+    'warmth|space': { score: -1, name: 'Hugger vs Personal Space', line: 'One leans in, the other needs a little room.' },
+    'warmth|observe': { score: 1, name: 'Listener & Carer', line: 'One notices how people are doing, the other makes them feel better.' },
+    'warmth|drive': { score: 2, name: 'Captain & Heart', line: 'One sets the direction, the other brings everyone along.' },
+    'warmth|flow': { score: 1, name: 'Easy Company', line: 'Effortless to be around, together or apart.' },
+    'warmth|play': { score: 1, name: 'Fun Aunt & Uncle', line: 'Warmth and silliness in equal measure.' },
+
+    /* ---------- Space ---------- */
+    'space|space': { score: 1, name: 'Parallel Play', line: 'Happy in the same room doing completely different things.' },
+    'space|observe': { score: 1, name: 'Quiet Ones', line: 'Few words, lots understood.' },
+    'space|drive': { score: -1, name: 'Don’t Tell Me What to Do', line: 'One likes to steer, the other likes to find their own way.' },
+    'space|flow': { score: 1, name: 'Slow Travellers', line: 'No rush, no fuss, no itinerary.' },
+    'space|play': { score: 2, name: 'Wallflower & Instigator', line: 'One coaxes the other out, the other keeps them grounded.' },
+
+    /* ---------- Observe ---------- */
+    'observe|observe': { score: -1, name: 'Two Overthinkers', line: 'Great conversations. Decisions may take a while.' },
+    'observe|drive': { score: 1, name: 'Strategist & General', line: 'One sees all the angles, the other makes the call.' },
+    'observe|flow': { score: -1, name: 'Overthinker vs Shrugger', line: 'One has thought it through twice. The other’s already gone with it.' },
+    'observe|play': { score: 2, name: 'Wit & Audience', line: 'One spots the joke, the other runs with it.' },
+
+    /* ---------- Drive ---------- */
+    'drive|drive': { score: -2, name: 'Two Captains', line: 'Two people, one steering wheel. Take turns.' },
+    'drive|flow': { score: 1, name: 'Leader & Wingmate', line: 'One picks the direction, the other is happy to come along.' },
+    'drive|play': { score: -1, name: 'Boss vs Class Clown', line: 'One wants it done, the other wants it fun.' },
+
+    /* ---------- Flow & play ---------- */
+    'flow|flow': { score: -1, name: 'Nobody Decides', line: 'Lovely company. You’ll never pick a restaurant.' },
+    'flow|play': { score: 1, name: 'Improv Duo', line: 'You make it up as you go, and somehow it works.' },
+    'play|play': { score: 1, name: 'Double Trouble', line: 'Cheeky, chaotic and very good company.' }
+  };
+})(globalThis.SI = globalThis.SI || {});
+
+</script>
+  <script>
 /* Generated by scripts/calibrate.js — do not edit by hand. Rerun after changing questions, spices or dishes. */
 (function (SI) {
   SI.SPICE_NORMS = {"cinnamon":{"mean":1.0176,"sd":0.5392},"cardamom":{"mean":0.966,"sd":0.5079},"coriander":{"mean":0.9838,"sd":0.3729},"cumin":{"mean":0.9867,"sd":0.5624},"fennel":{"mean":0.9744,"sd":0.409},"fenugreek":{"mean":0.9808,"sd":0.4959},"mustard":{"mean":1.0425,"sd":0.5389},"nutmeg":{"mean":0.9939,"sd":0.4691},"sesame":{"mean":1.0169,"sd":0.4588},"caraway":{"mean":0.9732,"sd":0.4421},"blackpepper":{"mean":0.9977,"sd":0.4581},"pinkpepper":{"mean":1.0246,"sd":0.4587},"allspice":{"mean":1.0036,"sd":0.3476},"chilli":{"mean":1.0332,"sd":0.5643},"paprika":{"mean":1.0444,"sd":0.4333},"staranise":{"mean":1.0028,"sd":0.385},"vanilla":{"mean":0.9966,"sd":0.4651},"tamarind":{"mean":1.0174,"sd":0.3848},"sichuan":{"mean":1.0294,"sd":0.5971},"sumac":{"mean":1.0143,"sd":0.4548},"cloves":{"mean":0.9918,"sd":0.3837},"saffron":{"mean":0.9981,"sd":0.4953},"lavender":{"mean":0.9609,"sd":0.5168},"ginger":{"mean":1.0277,"sd":0.4806},"turmeric":{"mean":0.9947,"sd":0.4473},"galangal":{"mean":1.0151,"sd":0.4892}};
   SI.DISH_BIAS = {"pho":0.225,"banhmi":0.6,"greencurry":0.299,"padthai":0.193,"laksa":-0.025,"rendang":0.429,"ramen":-0.082,"bibimbap":0.442,"hotpot":0.086,"duck":-0.258,"larb":-0.005,"massaman":0.196,"bulgogi":0.344,"butterchicken":-0.007,"biryani":-0.435,"sambar":0.46,"vindaloo":-0.172,"shawarma":-0.133,"shakshuka":0.555,"tagine":0.182,"dorowat":0.474,"jollof":-0.179,"fattoush":-0.101,"lahmacun":0.339,"sholehzard":-0.6,"koshari":0.124,"merguez":0.204,"suya":0.145,"risotto":-0.404,"lasagne":0.025,"paella":0.039,"provencal":-0.6,"steak":0.6,"goulash":0.48,"bratwurst":0.471,"pizza":0.471,"moussaka":-0.457,"rarebit":0.219,"brulee":-0.018,"kanelbullar":-0.147,"tacos":0.328,"mole":0.45,"churros":-0.373,"jerk":0.303,"pumpkinpie":-0.096,"jambalaya":0.503,"ceviche":0.395,"empanadas":0.584};
+  SI.MATCH_BIAS = {"best":{"cinnamon":0.301,"cardamom":0.273,"coriander":0.101,"cumin":0.116,"fennel":0.326,"fenugreek":0.164,"mustard":0.265,"nutmeg":0.274,"sesame":0.104,"caraway":0.187,"blackpepper":0.205,"pinkpepper":0.313,"allspice":0.19,"chilli":0.24,"paprika":0.342,"staranise":0.35,"vanilla":0.182,"tamarind":0.344,"sichuan":0.35,"sumac":0.255,"cloves":0.286,"saffron":0.177,"lavender":0.301,"ginger":0.207,"turmeric":0.085,"galangal":0.256},"clash":{"cinnamon":-0.35,"cardamom":0.35,"coriander":-0.188,"cumin":0.282,"fennel":0.041,"fenugreek":0.073,"mustard":0.326,"nutmeg":-0.283,"sesame":-0.057,"caraway":0.192,"blackpepper":0.25,"pinkpepper":-0.122,"allspice":-0.345,"chilli":0.148,"paprika":-0.013,"staranise":-0.33,"vanilla":-0.256,"tamarind":-0.092,"sichuan":-0.35,"sumac":-0.076,"cloves":0.35,"saffron":-0.29,"lavender":0.152,"ginger":0.098,"turmeric":0.181,"galangal":-0.031}};
 })(globalThis.SI = globalThis.SI || {});
 
 </script>
@@ -1516,7 +1612,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     const t = result.text;
     const mix = result.blend.map((b) => b.pct + '% ' + b.spice.name).join(', ');
     return 'My Spice To Know Ya blend is ' + t.name + ' (' + mix + '). My signature dish: ' + result.dish.name + '. ' +
-      result.dish.subtitle + ' What dish would you be?';
+      result.dish.subtitle + (result.match ? ' I click with ' + typeName(result.match.best.spice) + '.' : '') + ' What dish would you be?';
   }
 
   // Trading-card details. Playful, never diagnostic.
@@ -1541,8 +1637,19 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     space: 'Alone time', observe: 'Quiet details', drive: 'Ticking boxes', flow: 'Going with it', play: 'A good laugh'
   };
 
+  // Compatibility for the card: who you click with, and who you clash with (or are least like).
+  const typeName = (s) => (s.short || s.name) + ' types';
+  function matchInfo(match, r) {
+    if (!match) return { clicks: CLICKS[r[1]], clash: { label: 'RESISTS', value: RESISTS[r[2]] } };
+    return {
+      clicks: typeName(match.best.spice),
+      clash: { label: match.clash.tension ? 'CLASHES WITH' : 'LEAST LIKE', value: typeName(match.clash.spice) }
+    };
+  }
+
   function cardInfo(result) {
     const { profile, blend, dish } = result;
+    const m = matchInfo(result.match, profile.ranked);
     const r = profile.ranked;
     const raw = 30 + blend.reduce((sum, b) => sum + (b.spice.heat || 0) * b.pct, 0);
     const heat = Math.max(30, Math.min(160, Math.round(raw / 10) * 10));
@@ -1555,7 +1662,8 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
       strengths: r.slice(0, 3).map((d) => STRENGTH[d]),
       weakness: WEAKNESS[r[0]],
       recharge: RECHARGE[r[0]],
-      clicks: CLICKS[r[1]],
+      clicks: m.clicks,
+      clash: m.clash,
       resists: RESISTS[r[2]],
       moves: blend.slice(0, 2).map((b) => ({
         spice: b.spice, pct: b.pct, name: b.spice.move.name, text: b.spice.move.text,
@@ -1751,6 +1859,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     const { dish, ranked } = chooseDish(centred);
     const blend = composeBlend(dish, centred);
     const result = { profile, spiceScores: scored, blend, dish, dishRanking: ranked };
+    result.match = SI.compat ? SI.compat.match(blend) : null;
     result.text = SI.narrative.compose(result);
     return result;
   }
@@ -1799,6 +1908,100 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
   }
 
   SI.engine = { buildProfile, scoreSpices, centre, chooseDish, composeBlend, allocatePercentages, interpret, validateContent, selectQuestions, cosine };
+})(globalThis.SI = globalThis.SI || {});
+
+</script>
+  <script>
+/*
+ * Spice compatibility.
+ *
+ * A player's blend is turned into a trait profile (each spice's traits, weighted
+ * by its percentage). That profile is compared with every spice the player does
+ * not already have, using the trait chart in js/data/compatibility.js.
+ *
+ * Some spices span many traits and get on with almost everyone, so raw scores
+ * would hand the same few spices to every player. Each spice's score is therefore
+ * judged against how well that spice gets on with people in general, plus a small
+ * calibrated offset (SI.MATCH_BIAS, from scripts/calibrate.js) that spreads matches
+ * across spices. Offsets are capped so a player's answers still decide.
+ */
+(function (SI) {
+  const cell = (a, b) => SI.PAIRINGS[a + '|' + b] || SI.PAIRINGS[b + '|' + a];
+
+  // How well two trait profiles get on, plus the trait pairs behind the score.
+  function vectorScore(A, B, withParts = false) {
+    let total = 0, wa = 0, wb = 0;
+    const parts = withParts ? [] : null;
+    for (const a in A) wa += A[a];
+    for (const b in B) wb += B[b];
+    for (const a in A) {
+      for (const b in B) {
+        const c = A[a] * B[b] * cell(a, b).score;
+        total += c;
+        if (parts) parts.push({ a, b, c });
+      }
+    }
+    return { score: wa && wb ? total / (wa * wb) : 0, parts };
+  }
+
+  function blendVector(blend) {
+    const v = {};
+    blend.forEach((b) => {
+      for (const d in b.spice.vector) v[d] = (v[d] || 0) + (b.pct / 100) * b.spice.vector[d];
+    });
+    return v;
+  }
+
+  // How sociable each spice is on average: its mean score against every spice.
+  let sociability = null;
+  function baseline() {
+    if (sociability) return sociability;
+    sociability = {};
+    SI.SPICES.forEach((s) => {
+      const sum = SI.SPICES.reduce((acc, o) => acc + vectorScore(s.vector, o.vector).score, 0);
+      sociability[s.id] = sum / SI.SPICES.length;
+    });
+    return sociability;
+  }
+
+  const pairingFrom = (parts, pick) => {
+    const p = parts.reduce((x, y) => (pick === 'max' ? (y.c > x.c ? y : x) : (y.c < x.c ? y : x)));
+    return Object.assign({ key: p.a + '|' + p.b }, cell(p.a, p.b));
+  };
+
+  /*
+   * best  – your perfect complement, with the trait pairing that makes it work
+   * also  – two more spices you get on with
+   * clash – the spice you're least alike; `tension` is true when it's a real clash,
+   *         in which case `pairing` names the friction behind it
+   */
+  function match(blend) {
+    const mine = new Set(blend.map((b) => b.spice.id));
+    const me = blendVector(blend);
+    const social = baseline();
+    const bias = SI.MATCH_BIAS || { best: {}, clash: {} };
+    const ranked = SI.SPICES
+      .map((spice, order) => {
+        const r = vectorScore(me, spice.vector);
+        return { spice, order, score: r.score, rel: r.score - social[spice.id] + (bias.best[spice.id] || 0), low: r.score + (bias.clash[spice.id] || 0) };
+      })
+      .filter((x) => !mine.has(x.spice.id))
+      .sort((x, y) => y.rel - x.rel || x.order - y.order);
+    const best = ranked[0];
+    // The clash must score below every spice offered as a good match, whatever the offsets say.
+    const floor = Math.min(...ranked.slice(0, 3).map((x) => x.score));
+    const pool = ranked.filter((x) => x.score < floor);
+    const worst = (pool.length ? pool : ranked).slice().sort((x, y) => x.low - y.low || x.order - y.order)[0];
+    const tension = worst.score < 0;
+    const partsOf = (x) => vectorScore(me, x.spice.vector, true).parts;
+    return {
+      best: { spice: best.spice, score: best.score, pairing: pairingFrom(partsOf(best), 'max') },
+      also: ranked.slice(1, 3).map((x) => ({ spice: x.spice, score: x.score })),
+      clash: { spice: worst.spice, score: worst.score, tension, pairing: tension ? pairingFrom(partsOf(worst), 'min') : null }
+    };
+  }
+
+  SI.compat = { cell, vectorScore, blendVector, match };
 })(globalThis.SI = globalThis.SI || {});
 
 </script>
@@ -3272,7 +3475,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     spiceBadge(g, imgs.spice(top.id), top.colour, W - 106, 581, 38);
 
     // Trait grid
-    const cells = [['WEAKNESS', card.weakness], ['RESISTS', card.resists], ['RECHARGES WITH', card.recharge], ['CLICKS WITH', card.clicks]];
+    const cells = [['WEAKNESS', card.weakness], ['RECHARGES WITH', card.recharge], ['CLICKS WITH', card.clicks], [card.clash.label, card.clash.value]];
     const gx = 52, gy = 664, cw = (W - 104) / 2, ch = 70;
     rr(g, gx, gy, W - 104, ch * 2, 16); g.fillStyle = '#FFFFFF'; g.fill(); g.lineWidth = 3; g.strokeStyle = INK; g.stroke();
     g.fillStyle = 'rgba(59,30,18,0.18)'; g.fillRect(gx + cw - 1, gy + 10, 2, ch * 2 - 20); g.fillRect(gx + 14, gy + ch - 1, W - 132, 2);
@@ -3603,6 +3806,34 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
     </section>`;
   }
 
+  // Compatibility: your perfect complement and your spicy tension (or who you're least like).
+  function matchCard(m) {
+    if (!m) return '';
+    const typeName = (s) => (s.short || s.name) + ' types';
+    const row = (kind, tag, spice, title, line) => `
+      <li class="match match-${kind}" style="--c:${spice.colour}">
+        <div class="spice-plate" aria-hidden="true">${spiceArt(spice.id)}</div>
+        <div class="match-body">
+          <p class="match-tag">${esc(tag)}</p>
+          <h3>${esc(typeName(spice))}${title ? ` <span class="match-pair">${esc(title)}</span>` : ''}</h3>
+          <p class="match-line">${esc(line)}</p>
+        </div>
+      </li>`;
+    const b = m.best, c = m.clash;
+    const clashRow = c.tension
+      ? row('clash', 'Spicy tension', c.spice, c.pairing.name, c.pairing.line)
+      : row('least', 'Least like you', c.spice, '', `Not a clash, just very different ingredients. ${c.spice.short || c.spice.name} people are ${c.spice.essence}.`);
+    const also = m.also.map((x) => x.spice.short || x.spice.name);
+    return `<div class="card matches">
+      <h2 class="eyebrow">Who you click with</h2>
+      <ul class="match-list">
+        ${row('best', 'Perfect complement', b.spice, b.pairing.name, b.pairing.line)}
+        ${clashRow}
+      </ul>
+      <p class="match-also">Also gets on with ${esc(also.join(' and '))} types.</p>
+    </div>`;
+  }
+
   function dishScreen() {
     const r = state.result, t = r.text, d = r.dish;
     return `<section class="screen dish">
@@ -3624,6 +3855,7 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
           <p class="lead">${esc(t.dish.story)}</p>
           <p class="mapping">${esc(t.dish.mapping)}</p>
         </div>
+        ${matchCard(r.match)}
       </div>
       <div class="dock dock-row">
         <button class="btn btn-plain btn-small" data-action="to-blend" aria-label="Back to my blend">‹ Blend</button>

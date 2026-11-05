@@ -140,3 +140,50 @@ test('percentage allocation always totals 100 for any weights', () => {
   const tied = SI.SPICES.slice(0, 3).map((spice, order) => ({ spice, order, weight: 1 }));
   assert.equal(SI.engine.allocatePercentages(tied).reduce((a, b) => a + b.pct, 0), 100);
 });
+
+test('compatibility chart covers every trait pairing exactly once', () => {
+  const D = SI.DIMENSIONS;
+  const keys = Object.keys(SI.PAIRINGS);
+  assert.equal(keys.length, D.length * (D.length + 1) / 2, 'one entry per unordered pair');
+  D.forEach((a) => D.forEach((b) => {
+    const c = SI.compat.cell(a, b);
+    assert.ok(c, `missing ${a}|${b}`);
+    assert.ok([-2, -1, 0, 1, 2].includes(c.score), `${a}|${b} score`);
+    assert.ok(c.name && c.line, `${a}|${b} text`);
+  }));
+  keys.forEach((k) => { const [a, b] = k.split('|'); if (a !== b) assert.ok(!SI.PAIRINGS[b + '|' + a], 'duplicate ' + k); });
+  D.forEach((d) => assert.ok(D.some((o) => SI.compat.cell(d, o).score === 2), d + ' has a perfect complement'));
+});
+
+test('spice compatibility is symmetric', () => {
+  SI.SPICES.forEach((a) => SI.SPICES.forEach((b) => {
+    const x = SI.compat.vectorScore(a.vector, b.vector).score, y = SI.compat.vectorScore(b.vector, a.vector).score;
+    assert.ok(Math.abs(x - y) < 1e-9, `${a.id}/${b.id}`);
+  }));
+});
+
+test('every result has a complete, sensible match', () => {
+  SAMPLE.slice(0, 400).forEach(({ r }) => {
+    const m = r.match, mine = new Set(r.blend.map((b) => b.spice.id));
+    assert.ok(m && m.best && m.clash && m.also.length === 2);
+    [m.best, m.clash, ...m.also].forEach((x) => assert.ok(!mine.has(x.spice.id), 'matched with own spice ' + x.spice.id));
+    assert.notEqual(m.best.spice.id, m.clash.spice.id);
+    assert.ok(m.best.pairing.name && m.best.pairing.line && m.best.pairing.score > 0, 'best pairing ' + m.best.pairing.name);
+    if (m.clash.tension) assert.ok(m.clash.pairing && m.clash.pairing.score < 0, 'clash pairing');
+    else assert.equal(m.clash.pairing, null);
+    assert.ok(m.best.score > m.clash.score);
+    const c = r.text.card;
+    assert.ok(c.clicks.endsWith(' types') && c.clash.value.endsWith(' types'));
+    assert.ok(['CLASHES WITH', 'LEAST LIKE'].includes(c.clash.label));
+    assert.ok(r.text.share.includes('I click with'));
+  });
+});
+
+test('matches are spread across spices', () => {
+  const best = {}, clash = {};
+  const list = SAMPLE;
+  list.forEach(({ r }) => { const m = r.match; best[m.best.spice.id] = (best[m.best.spice.id] || 0) + 1; clash[m.clash.spice.id] = (clash[m.clash.spice.id] || 0) + 1; });
+  assert.ok(Object.keys(best).length >= 20, 'distinct best matches: ' + Object.keys(best).length);
+  Object.entries(best).forEach(([id, n]) => assert.ok(n / list.length < 0.12, `${id} is everyone's match: ${n / list.length}`));
+  Object.entries(clash).forEach(([id, n]) => assert.ok(n / list.length < 0.15, `${id} is everyone's clash: ${n / list.length}`));
+});

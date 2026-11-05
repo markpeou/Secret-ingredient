@@ -125,7 +125,7 @@
     const t = result.text;
     const mix = result.blend.map((b) => b.pct + '% ' + b.spice.name).join(', ');
     return 'My Spice To Know Ya blend is ' + t.name + ' (' + mix + '). My signature dish: ' + result.dish.name + '. ' +
-      result.dish.subtitle + ' What dish would you be?';
+      result.dish.subtitle + (result.match ? ' I click with ' + typeName(result.match.best.spice) + '.' : '') + ' What dish would you be?';
   }
 
   // Trading-card details. Playful, never diagnostic.
@@ -150,8 +150,19 @@
     space: 'Alone time', observe: 'Quiet details', drive: 'Ticking boxes', flow: 'Going with it', play: 'A good laugh'
   };
 
+  // Compatibility for the card: who you click with, and who you clash with (or are least like).
+  const typeName = (s) => (s.short || s.name) + ' types';
+  function matchInfo(match, r) {
+    if (!match) return { clicks: CLICKS[r[1]], clash: { label: 'RESISTS', value: RESISTS[r[2]] } };
+    return {
+      clicks: typeName(match.best.spice),
+      clash: { label: match.clash.tension ? 'CLASHES WITH' : 'LEAST LIKE', value: typeName(match.clash.spice) }
+    };
+  }
+
   function cardInfo(result) {
     const { profile, blend, dish } = result;
+    const m = matchInfo(result.match, profile.ranked);
     const r = profile.ranked;
     const raw = 30 + blend.reduce((sum, b) => sum + (b.spice.heat || 0) * b.pct, 0);
     const heat = Math.max(30, Math.min(160, Math.round(raw / 10) * 10));
@@ -164,7 +175,8 @@
       strengths: r.slice(0, 3).map((d) => STRENGTH[d]),
       weakness: WEAKNESS[r[0]],
       recharge: RECHARGE[r[0]],
-      clicks: CLICKS[r[1]],
+      clicks: m.clicks,
+      clash: m.clash,
       resists: RESISTS[r[2]],
       moves: blend.slice(0, 2).map((b) => ({
         spice: b.spice, pct: b.pct, name: b.spice.move.name, text: b.spice.move.text,

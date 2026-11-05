@@ -179,6 +179,34 @@
     </section>`;
   }
 
+  // Compatibility: your perfect complement and your spicy tension (or who you're least like).
+  function matchCard(m) {
+    if (!m) return '';
+    const typeName = (s) => (s.short || s.name) + ' types';
+    const row = (kind, tag, spice, title, line) => `
+      <li class="match match-${kind}" style="--c:${spice.colour}">
+        <div class="spice-plate" aria-hidden="true">${spiceArt(spice.id)}</div>
+        <div class="match-body">
+          <p class="match-tag">${esc(tag)}</p>
+          <h3>${esc(typeName(spice))}${title ? ` <span class="match-pair">${esc(title)}</span>` : ''}</h3>
+          <p class="match-line">${esc(line)}</p>
+        </div>
+      </li>`;
+    const b = m.best, c = m.clash;
+    const clashRow = c.tension
+      ? row('clash', 'Spicy tension', c.spice, c.pairing.name, c.pairing.line)
+      : row('least', 'Least like you', c.spice, '', `Not a clash, just very different ingredients. ${c.spice.short || c.spice.name} people are ${c.spice.essence}.`);
+    const also = m.also.map((x) => x.spice.short || x.spice.name);
+    return `<div class="card matches">
+      <h2 class="eyebrow">Who you click with</h2>
+      <ul class="match-list">
+        ${row('best', 'Perfect complement', b.spice, b.pairing.name, b.pairing.line)}
+        ${clashRow}
+      </ul>
+      <p class="match-also">Also gets on with ${esc(also.join(' and '))} types.</p>
+    </div>`;
+  }
+
   function dishScreen() {
     const r = state.result, t = r.text, d = r.dish;
     return `<section class="screen dish">
@@ -200,6 +228,7 @@
           <p class="lead">${esc(t.dish.story)}</p>
           <p class="mapping">${esc(t.dish.mapping)}</p>
         </div>
+        ${matchCard(r.match)}
       </div>
       <div class="dock dock-row">
         <button class="btn btn-plain btn-small" data-action="to-blend" aria-label="Back to my blend">‹ Blend</button>

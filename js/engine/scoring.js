@@ -164,6 +164,7 @@
     const { dish, ranked } = chooseDish(centred);
     const blend = composeBlend(dish, centred);
     const result = { profile, spiceScores: scored, blend, dish, dishRanking: ranked };
+    result.match = SI.compat ? SI.compat.match(blend) : null;
     result.text = SI.narrative.compose(result);
     return result;
   }

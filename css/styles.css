@@ -337,6 +337,23 @@ button.g-seg:focus-visible { outline: 4px solid var(--focus); outline-offset: -4
 .story .lead { font-size: 0.93rem; line-height: 1.4; }
 .mapping { font-size: 0.88rem; line-height: 1.4; color: var(--ink-soft); }
 
+/* ---------- Compatibility ---------- */
+.matches { display: flex; flex-direction: column; gap: 10px; padding-block: 14px; }
+.match-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.match { display: grid; grid-template-columns: 54px 1fr; gap: 12px; align-items: start; padding: 10px; border-radius: 14px; border: 3px solid var(--ink); background: #FFFFFF; }
+.match .spice-plate { width: 54px; height: 54px; background: #FFFFFF; box-shadow: 0 0 0 4px var(--c); }
+.match-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.match-tag { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.match-best .match-tag { color: #2E7D3A; }
+.match-clash .match-tag { color: #C0392B; }
+.match-least .match-tag { color: var(--ink-soft); }
+.match-best { background: #EAF7EC; }
+.match-clash { background: #FDECEA; }
+.match h3 { font-size: 1.1rem; font-weight: 600; line-height: 1.25; }
+.match-pair { display: inline-block; font-size: 0.82rem; font-weight: 600; background: #FFFFFF; border: 2px solid var(--ink); border-radius: 999px; padding: 0 8px; vertical-align: 2px; }
+.match-line { font-size: 0.9rem; line-height: 1.35; }
+.match-also { font-size: 0.88rem; color: var(--ink-soft); }
+
 /* ---------- Card screen ---------- */
 .card-screen .body { gap: 6px; padding-block: 6px 4px; }
 .card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex: none; }
