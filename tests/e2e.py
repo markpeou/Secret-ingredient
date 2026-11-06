@@ -117,7 +117,7 @@ def play(page, rng, keyboard=False, screenshots=False):
     assert page.locator(".matches .match-good").count() == 2
     assert page.locator(".matches .match-good .match-pair").count() == 2
     assert page.locator(".matches .match-clash, .matches .match-least").count() == 1
-    assert all(t.endswith(" types") or " types " in t for t in page.locator(".matches h3").all_inner_texts())
+    assert all(t.split("\n")[0].strip().endswith(" types") for t in page.locator(".matches h3").all_inner_texts())
     page.wait_for_timeout(1500)
     w = page.evaluate("[document.documentElement.scrollWidth, document.documentElement.clientWidth]")
     assert w[0] <= w[1], f"dish screen scrolls sideways: {w}"
