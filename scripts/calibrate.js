@@ -24,7 +24,7 @@ SI.SPICES.forEach((sp) => {
 SI.SPICE_NORMS = norms;
 const centred = sample.map((sc) => SI.engine.centre(sc));
 
-const CAP = 0.6, target = 1 / SI.DISHES.length;
+const CAP = 0.75, target = 1 / SI.DISHES.length;
 const bias = Object.fromEntries(SI.DISHES.map((d) => [d.id, 0]));
 for (let it = 0; it < 120; it++) {
   const counts = Object.fromEntries(SI.DISHES.map((d) => [d.id, 0]));

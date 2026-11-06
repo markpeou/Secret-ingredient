@@ -31,42 +31,42 @@ So the blend always makes culinary sense for the dish, and two people with the s
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Cinnamon** | Warmth & connection ×3, Playfulness & fun ×1, Stability & practicality ×1 | warm, affectionate and comforting | Phở, Bánh mì, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Butter chicken, Biryani, Vindaloo, Chicken shawarma, Moroccan tagine, Sholeh zard, Koshari, Moussaka, Cinnamon buns, Mole poblano, Churros & chocolate, Jerk chicken, Pumpkin pie |
+| **Cinnamon** | Warmth & connection ×3, Playfulness & fun ×1, Stability & practicality ×1 | warm, affectionate and comforting | Phở, Bánh mì, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Dan dan noodles, Char siu, Red-braised pork belly, Tea eggs, Roti canai & dhal, Butter chicken, Biryani, Vindaloo, Rogan josh, Chole bhature, Nihari, Kottu roti, Egg hoppers, Chicken shawarma, Moroccan tagine, Sholeh zard, Koshari, Moussaka, Cinnamon buns, Mole poblano, Churros & chocolate, Jerk chicken, Pumpkin pie |
 
 ### Seed & pod
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Cardamom** | Independence & space ×3, Noticing & reflecting ×2 | thoughtful, independent and quietly distinctive | Phở, Massaman curry, Butter chicken, Biryani, Doro wat, Sholeh zard, Cinnamon buns |
-| **Coriander seed** | Adaptability & spontaneity ×2, Warmth & connection ×1, Stability & practicality ×1 | bright, easy-going and friendly | Phở, Thai green curry, Curry laksa, Beef rendang, Butter chicken, Sambar, Chicken shawarma, Moroccan tagine, Doro wat, Koshari, Merguez & harissa |
-| **Cumin** | Stability & practicality ×3, Determination & intensity ×1 | grounded, practical and reliable | Thai green curry, Curry laksa, Massaman curry, Butter chicken, Biryani, Sambar, Vindaloo, Chicken shawarma, Shakshuka, Moroccan tagine, Lahmacun, Koshari, Merguez & harissa, Tacos al pastor, Empanadas |
-| **Fennel seed** | Independence & space ×2, Warmth & connection ×1, Adaptability & spontaneity ×1 | gentle, soothing and quietly sweet | Bánh mì, Curry laksa, Sichuan hot pot, Five-spice duck, Lasagne, Provençal roast chicken, Pizza diavola |
-| **Fenugreek** | Noticing & reflecting ×2, Stability & practicality ×2 | deep, bittersweet and loyal | Butter chicken, Sambar, Doro wat |
-| **Mustard seed** | Energy & action ×2, Determination & intensity ×1, Playfulness & fun ×1 | zippy, quick and full of pep | Sambar, Vindaloo, Steak au poivre, Bratwurst & sauerkraut, Welsh rarebit |
-| **Nutmeg** | Warmth & connection ×2, Stability & practicality ×1, Independence & space ×1 | cosy, nostalgic and gently warm | Massaman curry, Suya, Saffron risotto, Lasagne, Bratwurst & sauerkraut, Moussaka, Lavender crème brûlée, Jerk chicken, Pumpkin pie |
-| **Sesame** | Warmth & connection ×2, Energy & action ×1, Adaptability & spontaneity ×1 | sociable, nutty and good company | Ramen with chilli oil, Bibimbap, Bulgogi, Mole poblano |
+| **Cardamom** | Independence & space ×3, Noticing & reflecting ×2 | thoughtful, independent and quietly distinctive | Phở, Massaman curry, Roti canai & dhal, Butter chicken, Biryani, Rogan josh, Chole bhature, Nihari, Kottu roti, Fish ambul thiyal, Egg hoppers, Doro wat, Sholeh zard, Cinnamon buns |
+| **Coriander seed** | Adaptability & spontaneity ×2, Warmth & connection ×1, Stability & practicality ×1 | bright, easy-going and friendly | Phở, Thai green curry, Curry laksa, Beef rendang, Roti canai & dhal, Satay, Nasi goreng, Soto ayam, Butter chicken, Sambar, Chole bhature, Chicken karahi, Chapli kebab, Kottu roti, Chicken shawarma, Moroccan tagine, Doro wat, Koshari, Merguez & harissa |
+| **Cumin** | Stability & practicality ×3, Determination & intensity ×1 | grounded, practical and reliable | Thai green curry, Curry laksa, Massaman curry, Cumin lamb skewers, Roti canai & dhal, Satay, Butter chicken, Biryani, Sambar, Vindaloo, Chole bhature, Masala dosa, Chicken karahi, Chapli kebab, Kottu roti, Chicken shawarma, Shakshuka, Moroccan tagine, Lahmacun, Koshari, Merguez & harissa, Tacos al pastor, Empanadas |
+| **Fennel seed** | Independence & space ×2, Warmth & connection ×1, Adaptability & spontaneity ×1 | gentle, soothing and quietly sweet | Bánh mì, Curry laksa, Sichuan hot pot, Five-spice duck, Char siu, Tea eggs, Roti canai & dhal, Satay, Rogan josh, Nihari, Kottu roti, Lasagne, Provençal roast chicken, Pizza diavola |
+| **Fenugreek** | Noticing & reflecting ×2, Stability & practicality ×2 | deep, bittersweet and loyal | Butter chicken, Sambar, Chole bhature, Masala dosa, Doro wat |
+| **Mustard seed** | Energy & action ×2, Determination & intensity ×1, Playfulness & fun ×1 | zippy, quick and full of pep | Roti canai & dhal, Sambar, Vindaloo, Masala dosa, Steak au poivre, Bratwurst & sauerkraut, Welsh rarebit |
+| **Nutmeg** | Warmth & connection ×2, Stability & practicality ×1, Independence & space ×1 | cosy, nostalgic and gently warm | Massaman curry, Nihari, Suya, Saffron risotto, Lasagne, Bratwurst & sauerkraut, Moussaka, Lavender crème brûlée, Jerk chicken, Pumpkin pie |
+| **Sesame** | Warmth & connection ×2, Energy & action ×1, Adaptability & spontaneity ×1 | sociable, nutty and good company | Ramen with chilli oil, Bibimbap, Bulgogi, Dan dan noodles, Char siu, Mole poblano |
 | **Caraway** | Stability & practicality ×2, Noticing & reflecting ×1, Independence & space ×1 | traditional, earthy and dependable | Merguez & harissa, Goulash, Bratwurst & sauerkraut |
 
 ### Fruit & berry
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Black pepper** | Determination & intensity ×2, Noticing & reflecting ×1, Stability & practicality ×1 | direct, sharp-witted and decisive | Bánh mì, Thai green curry, Pad Thai, Bibimbap, Larb, Bulgogi, Biryani, Vindaloo, Shakshuka, Jollof rice, Fattoush, Saffron risotto, Lasagne, Paella, Provençal roast chicken, Steak au poivre, Goulash, Bratwurst & sauerkraut, Pizza diavola, Moussaka, Welsh rarebit, Tacos al pastor, Mole poblano, Jerk chicken, Jambalaya, Ceviche |
+| **Black pepper** | Determination & intensity ×2, Noticing & reflecting ×1, Stability & practicality ×1 | direct, sharp-witted and decisive | Bánh mì, Thai green curry, Pad Thai, Bibimbap, Larb, Bulgogi, Nasi goreng, Soto ayam, Lok lak, Biryani, Vindaloo, Nihari, Chicken karahi, Chapli kebab, Fish ambul thiyal, Egg hoppers, Shakshuka, Jollof rice, Fattoush, Saffron risotto, Lasagne, Paella, Provençal roast chicken, Steak au poivre, Goulash, Bratwurst & sauerkraut, Pizza diavola, Moussaka, Welsh rarebit, Tacos al pastor, Mole poblano, Jerk chicken, Jambalaya, Ceviche |
 | **Pink peppercorn** | Playfulness & fun ×3, Warmth & connection ×1, Adaptability & spontaneity ×1 | playful, charming and a little mischievous | Steak au poivre |
 | **Allspice** | Adaptability & spontaneity ×2, Curiosity & novelty ×1, Warmth & connection ×1, Playfulness & fun ×1 | versatile, generous and hard to pin down | Chicken shawarma, Lahmacun, Moussaka, Tacos al pastor, Mole poblano, Jerk chicken, Pumpkin pie |
-| **Chilli** | Determination & intensity ×3, Energy & action ×2, Playfulness & fun ×1 | bold, intense and quietly competitive | Bánh mì, Thai green curry, Pad Thai, Curry laksa, Beef rendang, Ramen with chilli oil, Bibimbap, Sichuan hot pot, Larb, Butter chicken, Sambar, Vindaloo, Shakshuka, Doro wat, Jollof rice, Fattoush, Lahmacun, Koshari, Merguez & harissa, Suya, Pizza diavola, Welsh rarebit, Tacos al pastor, Mole poblano, Churros & chocolate, Jerk chicken, Jambalaya, Ceviche, Empanadas |
+| **Chilli** | Determination & intensity ×3, Energy & action ×2, Playfulness & fun ×1 | bold, intense and quietly competitive | Bánh mì, Thai green curry, Pad Thai, Curry laksa, Beef rendang, Ramen with chilli oil, Bibimbap, Sichuan hot pot, Larb, Mapo tofu, Dan dan noodles, Cumin lamb skewers, Red-braised pork belly, Nasi lemak, Nasi goreng, Fish amok, Lok lak, Samlor machu, Butter chicken, Sambar, Vindaloo, Rogan josh, Chole bhature, Masala dosa, Nihari, Chicken karahi, Chapli kebab, Kottu roti, Fish ambul thiyal, Egg hoppers, Shakshuka, Doro wat, Jollof rice, Fattoush, Lahmacun, Koshari, Merguez & harissa, Suya, Pizza diavola, Welsh rarebit, Tacos al pastor, Mole poblano, Churros & chocolate, Jerk chicken, Jambalaya, Ceviche, Empanadas |
 | **Paprika** | Playfulness & fun ×2, Energy & action ×2, Warmth & connection ×1 | vibrant, smoky and full of colour | Chicken shawarma, Shakshuka, Jollof rice, Lahmacun, Suya, Paella, Goulash, Pizza diavola, Jambalaya, Empanadas |
-| **Star anise** | Curiosity & novelty ×2, Independence & space ×1, Playfulness & fun ×1, Noticing & reflecting ×1 | unconventional, imaginative and intriguing | Phở, Bánh mì, Beef rendang, Ramen with chilli oil, Sichuan hot pot, Five-spice duck |
+| **Star anise** | Curiosity & novelty ×2, Independence & space ×1, Playfulness & fun ×1, Noticing & reflecting ×1 | unconventional, imaginative and intriguing | Phở, Bánh mì, Beef rendang, Ramen with chilli oil, Sichuan hot pot, Five-spice duck, Char siu, Red-braised pork belly, Tea eggs |
 | **Vanilla** | Stability & practicality ×2, Warmth & connection ×2, Noticing & reflecting ×1 | sweet, comforting and underrated | Lavender crème brûlée, Cinnamon buns, Churros & chocolate |
-| **Tamarind** | Playfulness & fun ×2, Curiosity & novelty ×1, Adaptability & spontaneity ×1, Determination & intensity ×1 | tangy, cheeky and full of contrasts | Pad Thai, Massaman curry, Sambar |
-| **Sichuan pepper** | Curiosity & novelty ×3, Energy & action ×1, Playfulness & fun ×1 | electric, thrilling and unforgettable | Ramen with chilli oil, Sichuan hot pot, Five-spice duck |
+| **Tamarind** | Playfulness & fun ×2, Curiosity & novelty ×1, Adaptability & spontaneity ×1, Determination & intensity ×1 | tangy, cheeky and full of contrasts | Pad Thai, Massaman curry, Nasi lemak, Samlor machu, Sambar |
+| **Sichuan pepper** | Curiosity & novelty ×3, Energy & action ×1, Playfulness & fun ×1 | electric, thrilling and unforgettable | Ramen with chilli oil, Sichuan hot pot, Five-spice duck, Mapo tofu, Dan dan noodles, Cumin lamb skewers, Tea eggs |
 | **Sumac** | Noticing & reflecting ×2, Playfulness & fun ×2 | zesty, sharp and quick-witted | Chicken shawarma, Fattoush, Lahmacun |
 
 ### Flower & stigma
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Cloves** | Determination & intensity ×2, Independence & space ×1, Noticing & reflecting ×1 | intense, potent and small but mighty | Phở, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Butter chicken, Biryani, Vindaloo, Doro wat, Tacos al pastor, Mole poblano, Pumpkin pie |
+| **Cloves** | Determination & intensity ×2, Independence & space ×1, Noticing & reflecting ×1 | intense, potent and small but mighty | Phở, Beef rendang, Sichuan hot pot, Five-spice duck, Massaman curry, Char siu, Tea eggs, Butter chicken, Biryani, Vindaloo, Rogan josh, Chole bhature, Nihari, Egg hoppers, Doro wat, Tacos al pastor, Mole poblano, Pumpkin pie |
 | **Saffron** | Noticing & reflecting ×3, Warmth & connection ×1, Curiosity & novelty ×1 | perceptive, refined and creative | Biryani, Moroccan tagine, Sholeh zard, Saffron risotto, Paella |
 | **Lavender** | Independence & space ×2, Adaptability & spontaneity ×2 | dreamy, calm and a little romantic | Provençal roast chicken, Lavender crème brûlée |
 
@@ -74,9 +74,9 @@ So the blend always makes culinary sense for the dish, and two people with the s
 
 | Spice | Traits it expresses | Personality | Found in |
 |---|---|---|---|
-| **Ginger** | Energy & action ×3, Curiosity & novelty ×2, Adaptability & spontaneity ×1 | energetic, adventurous and resilient | Phở, Ramen with chilli oil, Bibimbap, Bulgogi, Moroccan tagine, Doro wat, Jollof rice, Suya, Jerk chicken, Pumpkin pie, Ceviche |
-| **Turmeric** | Adaptability & spontaneity ×3, Determination & intensity ×1, Energy & action ×1 | adaptable, resilient and purposeful | Curry laksa, Beef rendang, Vindaloo, Chicken shawarma, Moroccan tagine, Jollof rice |
-| **Galangal** | Curiosity & novelty ×2, Determination & intensity ×2 | daring, sharp and pioneering | Thai green curry, Curry laksa, Beef rendang, Larb |
+| **Ginger** | Energy & action ×3, Curiosity & novelty ×2, Adaptability & spontaneity ×1 | energetic, adventurous and resilient | Phở, Ramen with chilli oil, Bibimbap, Bulgogi, Mapo tofu, Char siu, Red-braised pork belly, Nasi lemak, Soto ayam, Fish amok, Lok lak, Rogan josh, Nihari, Chicken karahi, Chapli kebab, Fish ambul thiyal, Moroccan tagine, Doro wat, Jollof rice, Suya, Jerk chicken, Pumpkin pie, Ceviche |
+| **Turmeric** | Adaptability & spontaneity ×3, Determination & intensity ×1, Energy & action ×1 | adaptable, resilient and purposeful | Curry laksa, Beef rendang, Roti canai & dhal, Satay, Nasi goreng, Soto ayam, Fish amok, Samlor machu, Vindaloo, Chole bhature, Masala dosa, Fish ambul thiyal, Chicken shawarma, Moroccan tagine, Jollof rice |
+| **Galangal** | Curiosity & novelty ×2, Determination & intensity ×2 | daring, sharp and pioneering | Thai green curry, Curry laksa, Beef rendang, Larb, Nasi lemak, Satay, Nasi goreng, Soto ayam, Fish amok, Samlor machu |
 
 ## Dishes
 
@@ -84,54 +84,77 @@ Share of players is from 6,000 simulated players. Offset is the small calibratio
 
 | Dish | From | Real spice set (usual share) | Share of players | Offset |
 |---|---|---|---|---|
-| **Phở** | Vietnam | Star anise 25%, Cinnamon 20%, Coriander seed 15%, Ginger 15%, Cloves 15%, Cardamom 10% | 2.0% | 0.23 |
-| **Bánh mì** | Vietnam | Black pepper 35%, Chilli 25%, Star anise 15%, Fennel seed 15%, Cinnamon 10% | 2.3% | 0.60 |
-| **Thai green curry** | Thailand | Galangal 30%, Chilli 25%, Coriander seed 20%, Cumin 15%, Black pepper 10% | 2.8% | 0.30 |
-| **Pad Thai** | Thailand | Tamarind 50%, Chilli 30%, Black pepper 20% | 2.1% | 0.19 |
-| **Curry laksa** | Malaysia & Singapore | Chilli 25%, Galangal 20%, Coriander seed 20%, Turmeric 15%, Cumin 10%, Fennel seed 10% | 2.2% | -0.03 |
-| **Beef rendang** | Indonesia | Chilli 25%, Galangal 20%, Coriander seed 15%, Turmeric 10%, Cinnamon 10%, Cloves 10%, Star anise 10% | 1.6% | 0.43 |
-| **Ramen with chilli oil** | Japan | Sesame 30%, Chilli 25%, Ginger 20%, Sichuan pepper 15%, Star anise 10% | 1.9% | -0.08 |
-| **Bibimbap** | Korea | Chilli 40%, Sesame 35%, Ginger 15%, Black pepper 10% | 1.7% | 0.44 |
-| **Sichuan hot pot** | China | Sichuan pepper 30%, Chilli 30%, Star anise 10%, Cinnamon 10%, Fennel seed 10%, Cloves 10% | 2.0% | 0.09 |
-| **Five-spice duck** | China | Star anise 30%, Cinnamon 20%, Fennel seed 20%, Cloves 15%, Sichuan pepper 15% | 1.9% | -0.26 |
-| **Larb** | Laos | Chilli 40%, Galangal 35%, Black pepper 25% | 1.6% | -0.01 |
-| **Massaman curry** | Thailand | Cardamom 25%, Cinnamon 20%, Tamarind 20%, Cumin 15%, Cloves 10%, Nutmeg 10% | 2.1% | 0.20 |
-| **Bulgogi** | Korea | Sesame 45%, Ginger 30%, Black pepper 25% | 1.6% | 0.34 |
-| **Butter chicken** | India | Fenugreek 20%, Chilli 20%, Cardamom 15%, Cumin 15%, Coriander seed 10%, Cinnamon 10%, Cloves 10% | 1.9% | -0.01 |
-| **Biryani** | India | Saffron 20%, Cardamom 20%, Cinnamon 15%, Cloves 15%, Cumin 15%, Black pepper 15% | 2.4% | -0.43 |
-| **Sambar** | South India | Tamarind 25%, Mustard seed 20%, Coriander seed 15%, Fenugreek 15%, Chilli 15%, Cumin 10% | 2.1% | 0.46 |
-| **Vindaloo** | Goa, India | Chilli 30%, Cumin 15%, Black pepper 15%, Mustard seed 10%, Cloves 10%, Cinnamon 10%, Turmeric 10% | 1.8% | -0.17 |
-| **Chicken shawarma** | The Levant | Cumin 20%, Paprika 20%, Coriander seed 15%, Allspice 15%, Cinnamon 10%, Sumac 10%, Turmeric 10% | 1.7% | -0.13 |
-| **Shakshuka** | North Africa | Paprika 35%, Cumin 30%, Chilli 20%, Black pepper 15% | 1.8% | 0.56 |
-| **Moroccan tagine** | Morocco | Cumin 20%, Cinnamon 20%, Ginger 15%, Turmeric 15%, Saffron 15%, Coriander seed 15% | 2.3% | 0.18 |
-| **Doro wat** | Ethiopia | Chilli 30%, Fenugreek 15%, Cardamom 15%, Ginger 15%, Coriander seed 15%, Cloves 10% | 2.2% | 0.47 |
-| **Jollof rice** | West Africa | Chilli 30%, Paprika 25%, Ginger 20%, Turmeric 15%, Black pepper 10% | 2.1% | -0.18 |
-| **Fattoush** | Lebanon | Sumac 55%, Black pepper 25%, Chilli 20% | 1.9% | -0.10 |
-| **Lahmacun** | Turkey | Chilli 30%, Paprika 20%, Cumin 20%, Sumac 20%, Allspice 10% | 2.5% | 0.34 |
-| **Sholeh zard** | Iran | Saffron 45%, Cardamom 30%, Cinnamon 25% | 3.0% | -0.60 |
-| **Koshari** | Egypt | Cumin 40%, Coriander seed 25%, Chilli 20%, Cinnamon 15% | 2.3% | 0.12 |
-| **Merguez & harissa** | Tunisia | Chilli 35%, Caraway 25%, Coriander seed 20%, Cumin 20% | 2.0% | 0.20 |
-| **Suya** | Nigeria | Chilli 40%, Ginger 30%, Paprika 20%, Nutmeg 10% | 1.6% | 0.14 |
-| **Saffron risotto** | Italy | Saffron 60%, Black pepper 20%, Nutmeg 20% | 2.2% | -0.40 |
-| **Lasagne** | Italy | Nutmeg 40%, Black pepper 35%, Fennel seed 25% | 2.4% | 0.03 |
-| **Paella** | Spain | Saffron 50%, Paprika 35%, Black pepper 15% | 2.0% | 0.04 |
-| **Provençal roast chicken** | France | Black pepper 40%, Fennel seed 30%, Lavender 30% | 2.7% | -0.60 |
-| **Steak au poivre** | France | Black pepper 50%, Pink peppercorn 30%, Mustard seed 20% | 1.6% | 0.60 |
-| **Goulash** | Hungary | Paprika 55%, Caraway 30%, Black pepper 15% | 1.9% | 0.48 |
-| **Bratwurst & sauerkraut** | Germany | Mustard seed 35%, Caraway 30%, Nutmeg 20%, Black pepper 15% | 2.1% | 0.47 |
-| **Pizza diavola** | Italy | Chilli 40%, Fennel seed 30%, Black pepper 15%, Paprika 15% | 2.2% | 0.47 |
-| **Moussaka** | Greece | Cinnamon 35%, Nutmeg 25%, Allspice 20%, Black pepper 20% | 2.2% | -0.46 |
-| **Welsh rarebit** | Wales, UK | Mustard seed 45%, Black pepper 30%, Chilli 25% | 1.9% | 0.22 |
-| **Lavender crème brûlée** | France | Vanilla 60%, Lavender 30%, Nutmeg 10% | 2.3% | -0.02 |
-| **Cinnamon buns** | Sweden | Cinnamon 50%, Cardamom 35%, Vanilla 15% | 2.4% | -0.15 |
-| **Tacos al pastor** | Mexico | Chilli 35%, Cumin 20%, Black pepper 20%, Allspice 15%, Cloves 10% | 2.4% | 0.33 |
-| **Mole poblano** | Mexico | Chilli 35%, Cinnamon 15%, Sesame 15%, Black pepper 15%, Cloves 10%, Allspice 10% | 1.8% | 0.45 |
-| **Churros & chocolate** | Spain & Mexico | Cinnamon 50%, Vanilla 30%, Chilli 20% | 2.3% | -0.37 |
-| **Jerk chicken** | Jamaica | Allspice 35%, Chilli 30%, Cinnamon 10%, Nutmeg 10%, Ginger 10%, Black pepper 5% | 2.2% | 0.30 |
-| **Pumpkin pie** | USA | Cinnamon 40%, Nutmeg 20%, Ginger 20%, Cloves 10%, Allspice 10% | 2.1% | -0.10 |
-| **Jambalaya** | Louisiana, USA | Paprika 40%, Chilli 30%, Black pepper 30% | 2.0% | 0.50 |
-| **Ceviche** | Peru | Chilli 50%, Ginger 25%, Black pepper 25% | 2.1% | 0.40 |
-| **Empanadas** | Argentina | Cumin 35%, Paprika 35%, Chilli 30% | 1.6% | 0.58 |
+| **Phở** | Vietnam | Star anise 25%, Cinnamon 20%, Coriander seed 15%, Ginger 15%, Cloves 15%, Cardamom 10% | 1.2% | 0.37 |
+| **Bánh mì** | Vietnam | Black pepper 35%, Chilli 25%, Star anise 15%, Fennel seed 15%, Cinnamon 10% | 1.5% | 0.75 |
+| **Thai green curry** | Thailand | Galangal 30%, Chilli 25%, Coriander seed 20%, Cumin 15%, Black pepper 10% | 1.7% | 0.49 |
+| **Pad Thai** | Thailand | Tamarind 50%, Chilli 30%, Black pepper 20% | 1.5% | 0.39 |
+| **Curry laksa** | Malaysia & Singapore | Chilli 25%, Galangal 20%, Coriander seed 20%, Turmeric 15%, Cumin 10%, Fennel seed 10% | 1.8% | 0.42 |
+| **Beef rendang** | Indonesia | Chilli 25%, Galangal 20%, Coriander seed 15%, Turmeric 10%, Cinnamon 10%, Cloves 10%, Star anise 10% | 1.4% | 0.66 |
+| **Ramen with chilli oil** | Japan | Sesame 30%, Chilli 25%, Ginger 20%, Sichuan pepper 15%, Star anise 10% | 1.0% | 0.23 |
+| **Bibimbap** | Korea | Chilli 40%, Sesame 35%, Ginger 15%, Black pepper 10% | 1.1% | 0.53 |
+| **Sichuan hot pot** | China | Sichuan pepper 30%, Chilli 30%, Star anise 10%, Cinnamon 10%, Fennel seed 10%, Cloves 10% | 1.6% | 0.44 |
+| **Five-spice duck** | China | Star anise 30%, Cinnamon 20%, Fennel seed 20%, Cloves 15%, Sichuan pepper 15% | 1.2% | -0.01 |
+| **Larb** | Laos | Chilli 40%, Galangal 35%, Black pepper 25% | 1.1% | 0.12 |
+| **Massaman curry** | Thailand | Cardamom 25%, Cinnamon 20%, Tamarind 20%, Cumin 15%, Cloves 10%, Nutmeg 10% | 1.5% | 0.26 |
+| **Bulgogi** | Korea | Sesame 45%, Ginger 30%, Black pepper 25% | 1.0% | 0.43 |
+| **Mapo tofu** | Sichuan, China | Sichuan pepper 40%, Chilli 35%, Ginger 25% | 1.0% | -0.43 |
+| **Dan dan noodles** | Sichuan, China | Sichuan pepper 35%, Sesame 30%, Chilli 25%, Cinnamon 10% | 1.4% | 0.39 |
+| **Cumin lamb skewers** | Xinjiang, China | Cumin 50%, Chilli 30%, Sichuan pepper 20% | 1.5% | 0.47 |
+| **Char siu** | Guangdong, China | Star anise 20%, Fennel seed 20%, Cinnamon 15%, Cloves 15%, Ginger 15%, Sesame 15% | 1.7% | 0.29 |
+| **Red-braised pork belly** | China | Star anise 35%, Cinnamon 25%, Ginger 25%, Chilli 15% | 1.5% | -0.08 |
+| **Tea eggs** | China | Star anise 30%, Cinnamon 25%, Sichuan pepper 15%, Fennel seed 15%, Cloves 15% | 1.2% | 0.07 |
+| **Nasi lemak** | Malaysia | Chilli 40%, Tamarind 25%, Ginger 20%, Galangal 15% | 1.2% | 0.09 |
+| **Roti canai & dhal** | Malaysia | Cumin 20%, Coriander seed 20%, Fennel seed 20%, Turmeric 15%, Cardamom 10%, Cinnamon 10%, Mustard seed 5% | 1.9% | -0.32 |
+| **Satay** | Malaysia & Indonesia | Turmeric 30%, Coriander seed 25%, Cumin 20%, Fennel seed 15%, Galangal 10% | 1.5% | -0.51 |
+| **Nasi goreng** | Indonesia | Chilli 45%, Coriander seed 20%, Black pepper 15%, Galangal 10%, Turmeric 10% | 1.8% | 0.67 |
+| **Soto ayam** | Indonesia | Turmeric 30%, Galangal 20%, Ginger 20%, Coriander seed 15%, Black pepper 15% | 1.1% | -0.06 |
+| **Fish amok** | Cambodia | Galangal 35%, Turmeric 30%, Chilli 20%, Ginger 15% | 1.2% | 0.07 |
+| **Lok lak** | Cambodia | Black pepper 60%, Chilli 20%, Ginger 20% | 1.5% | 0.61 |
+| **Samlor machu** | Cambodia | Tamarind 40%, Galangal 25%, Chilli 20%, Turmeric 15% | 1.3% | -0.08 |
+| **Butter chicken** | India | Fenugreek 20%, Chilli 20%, Cardamom 15%, Cumin 15%, Coriander seed 10%, Cinnamon 10%, Cloves 10% | 1.3% | 0.03 |
+| **Biryani** | India | Saffron 20%, Cardamom 20%, Cinnamon 15%, Cloves 15%, Cumin 15%, Black pepper 15% | 1.9% | -0.52 |
+| **Sambar** | South India | Tamarind 25%, Mustard seed 20%, Coriander seed 15%, Fenugreek 15%, Chilli 15%, Cumin 10% | 1.3% | 0.57 |
+| **Vindaloo** | Goa, India | Chilli 30%, Cumin 15%, Black pepper 15%, Mustard seed 10%, Cloves 10%, Cinnamon 10%, Turmeric 10% | 1.4% | -0.09 |
+| **Rogan josh** | Kashmir, India | Fennel seed 25%, Ginger 20%, Chilli 20%, Cardamom 15%, Cloves 10%, Cinnamon 10% | 1.3% | 0.22 |
+| **Chole bhature** | Punjab, India | Coriander seed 20%, Cumin 20%, Chilli 15%, Cardamom 10%, Cinnamon 10%, Cloves 10%, Fenugreek 10%, Turmeric 5% | 1.6% | 0.28 |
+| **Masala dosa** | South India | Mustard seed 30%, Turmeric 25%, Chilli 20%, Fenugreek 15%, Cumin 10% | 1.8% | 0.48 |
+| **Nihari** | Pakistan | Ginger 20%, Fennel seed 15%, Cardamom 15%, Cloves 10%, Cinnamon 10%, Black pepper 10%, Nutmeg 10%, Chilli 10% | 1.4% | 0.38 |
+| **Chicken karahi** | Pakistan | Chilli 30%, Cumin 20%, Coriander seed 20%, Black pepper 15%, Ginger 15% | 1.5% | 0.63 |
+| **Chapli kebab** | Peshawar, Pakistan | Coriander seed 40%, Cumin 20%, Chilli 20%, Black pepper 10%, Ginger 10% | 1.4% | 0.41 |
+| **Kottu roti** | Sri Lanka | Coriander seed 25%, Cumin 20%, Chilli 20%, Fennel seed 15%, Cinnamon 10%, Cardamom 10% | 1.5% | 0.28 |
+| **Fish ambul thiyal** | Sri Lanka | Black pepper 45%, Chilli 15%, Ginger 15%, Turmeric 15%, Cardamom 10% | 1.9% | 0.60 |
+| **Egg hoppers** | Sri Lanka | Chilli 35%, Cinnamon 25%, Cardamom 15%, Cloves 15%, Black pepper 10% | 1.3% | 0.60 |
+| **Chicken shawarma** | The Levant | Cumin 20%, Paprika 20%, Coriander seed 15%, Allspice 15%, Cinnamon 10%, Sumac 10%, Turmeric 10% | 1.2% | -0.07 |
+| **Shakshuka** | North Africa | Paprika 35%, Cumin 30%, Chilli 20%, Black pepper 15% | 1.4% | 0.64 |
+| **Moroccan tagine** | Morocco | Cumin 20%, Cinnamon 20%, Ginger 15%, Turmeric 15%, Saffron 15%, Coriander seed 15% | 1.3% | 0.30 |
+| **Doro wat** | Ethiopia | Chilli 30%, Fenugreek 15%, Cardamom 15%, Ginger 15%, Coriander seed 15%, Cloves 10% | 1.2% | 0.63 |
+| **Jollof rice** | West Africa | Chilli 30%, Paprika 25%, Ginger 20%, Turmeric 15%, Black pepper 10% | 1.4% | -0.11 |
+| **Fattoush** | Lebanon | Sumac 55%, Black pepper 25%, Chilli 20% | 1.2% | -0.18 |
+| **Lahmacun** | Turkey | Chilli 30%, Paprika 20%, Cumin 20%, Sumac 20%, Allspice 10% | 1.5% | 0.35 |
+| **Sholeh zard** | Iran | Saffron 45%, Cardamom 30%, Cinnamon 25% | 2.2% | -0.75 |
+| **Koshari** | Egypt | Cumin 40%, Coriander seed 25%, Chilli 20%, Cinnamon 15% | 1.6% | 0.30 |
+| **Merguez & harissa** | Tunisia | Chilli 35%, Caraway 25%, Coriander seed 20%, Cumin 20% | 1.2% | 0.38 |
+| **Suya** | Nigeria | Chilli 40%, Ginger 30%, Paprika 20%, Nutmeg 10% | 0.9% | 0.28 |
+| **Saffron risotto** | Italy | Saffron 60%, Black pepper 20%, Nutmeg 20% | 1.6% | -0.56 |
+| **Lasagne** | Italy | Nutmeg 40%, Black pepper 35%, Fennel seed 25% | 1.6% | 0.08 |
+| **Paella** | Spain | Saffron 50%, Paprika 35%, Black pepper 15% | 1.4% | -0.03 |
+| **Provençal roast chicken** | France | Black pepper 40%, Fennel seed 30%, Lavender 30% | 1.1% | -0.44 |
+| **Steak au poivre** | France | Black pepper 50%, Pink peppercorn 30%, Mustard seed 20% | 1.5% | 0.70 |
+| **Goulash** | Hungary | Paprika 55%, Caraway 30%, Black pepper 15% | 1.1% | 0.49 |
+| **Bratwurst & sauerkraut** | Germany | Mustard seed 35%, Caraway 30%, Nutmeg 20%, Black pepper 15% | 1.6% | 0.57 |
+| **Pizza diavola** | Italy | Chilli 40%, Fennel seed 30%, Black pepper 15%, Paprika 15% | 1.8% | 0.66 |
+| **Moussaka** | Greece | Cinnamon 35%, Nutmeg 25%, Allspice 20%, Black pepper 20% | 1.4% | -0.74 |
+| **Welsh rarebit** | Wales, UK | Mustard seed 45%, Black pepper 30%, Chilli 25% | 1.1% | 0.29 |
+| **Lavender crème brûlée** | France | Vanilla 60%, Lavender 30%, Nutmeg 10% | 1.4% | -0.02 |
+| **Cinnamon buns** | Sweden | Cinnamon 50%, Cardamom 35%, Vanilla 15% | 1.4% | -0.31 |
+| **Tacos al pastor** | Mexico | Chilli 35%, Cumin 20%, Black pepper 20%, Allspice 15%, Cloves 10% | 1.6% | 0.47 |
+| **Mole poblano** | Mexico | Chilli 35%, Cinnamon 15%, Sesame 15%, Black pepper 15%, Cloves 10%, Allspice 10% | 0.9% | 0.51 |
+| **Churros & chocolate** | Spain & Mexico | Cinnamon 50%, Vanilla 30%, Chilli 20% | 1.6% | -0.64 |
+| **Jerk chicken** | Jamaica | Allspice 35%, Chilli 30%, Cinnamon 10%, Nutmeg 10%, Ginger 10%, Black pepper 5% | 1.5% | 0.47 |
+| **Pumpkin pie** | USA | Cinnamon 40%, Nutmeg 20%, Ginger 20%, Cloves 10%, Allspice 10% | 1.6% | -0.27 |
+| **Jambalaya** | Louisiana, USA | Paprika 40%, Chilli 30%, Black pepper 30% | 1.4% | 0.57 |
+| **Ceviche** | Peru | Chilli 50%, Ginger 25%, Black pepper 25% | 1.1% | 0.54 |
+| **Empanadas** | Argentina | Cumin 35%, Paprika 35%, Chilli 30% | 0.9% | 0.66 |
 
 ## Editing checklist
 

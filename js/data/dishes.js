@@ -106,6 +106,104 @@
       story: 'Bulgogi is marinated beef grilled at the table while everyone talks over it. Sweet, smoky and toasty with sesame, it’s as much about the gathering as the food.',
       art: { type: 'plate', style: 'bulgogi' }
     },
+    {
+      id: 'mapo', name: 'Mapo tofu', origin: 'Sichuan, China', flag: '🇨🇳',
+      subtitle: 'Soft on the outside, electric underneath.',
+      spices: { sichuan: 0.4, chilli: 0.35, ginger: 0.25 },
+      story: 'Mapo tofu looks gentle, all silky tofu, until the numbing tingle of Sichuan pepper arrives. Comforting and thrilling in the same mouthful.',
+      art: { type: 'mapo' }
+    },
+    {
+      id: 'dandan', name: 'Dan dan noodles', origin: 'Sichuan, China', flag: '🇨🇳',
+      subtitle: 'Quick, nutty and full of tingle.',
+      spices: { sichuan: 0.35, sesame: 0.3, chilli: 0.25, cinnamon: 0.1 },
+      story: 'Dan dan noodles started as street food carried on a shoulder pole. Small bowl, big personality: nutty sesame, chilli oil and a tingle that hangs around.',
+      art: { type: 'dandan' }
+    },
+    {
+      id: 'cuminlamb', name: 'Cumin lamb skewers', origin: 'Xinjiang, China', flag: '🇨🇳',
+      subtitle: 'Smoky, bold and made for late nights out.',
+      spices: { cumin: 0.5, chilli: 0.3, sichuan: 0.2 },
+      story: 'Chuanr are grilled over coals at night markets and eaten standing up with friends. Smoky, cumin-crusted and impossible to stop at one.',
+      art: { type: 'plate', style: 'skewers' }
+    },
+    {
+      id: 'charsiu', name: 'Char siu', origin: 'Guangdong, China', flag: '🇨🇳',
+      subtitle: 'Sweet, glossy and a reliable crowd-pleaser.',
+      spices: { staranise: 0.2, fennel: 0.2, cinnamon: 0.15, cloves: 0.15, ginger: 0.15, sesame: 0.15 },
+      story: 'Char siu hangs glistening in the shop window and everyone stops to look. Sticky, sweet and smoky at the edges, it makes a plain bowl of rice feel like a treat.',
+      art: { type: 'charsiu' }
+    },
+    {
+      id: 'hongshao', name: 'Red-braised pork belly', origin: 'China', flag: '🇨🇳',
+      subtitle: 'Patient, generous and quietly indulgent.',
+      spices: { staranise: 0.35, cinnamon: 0.25, ginger: 0.25, chilli: 0.15 },
+      story: 'Hong shao rou simmers slowly in soy, sugar and star anise until it’s glossy and melting. It’s the dish families make when they want to spoil someone.',
+      art: { type: 'hongshao' }
+    },
+    {
+      id: 'teaeggs', name: 'Tea eggs', origin: 'China', flag: '🇨🇳',
+      subtitle: 'Unassuming outside, beautifully patterned within.',
+      spices: { staranise: 0.3, cinnamon: 0.25, sichuan: 0.15, fennel: 0.15, cloves: 0.15 },
+      story: 'Tea eggs are cracked and left to soak in spiced tea, so the marbling only shows once you peel them. There’s always more to them than the plain shell suggests.',
+      art: { type: 'teaeggs' }
+    },
+    {
+      id: 'nasilemak', name: 'Nasi lemak', origin: 'Malaysia', flag: '🇲🇾',
+      subtitle: 'Easygoing, satisfying and with a fiery streak.',
+      spices: { chilli: 0.4, tamarind: 0.25, ginger: 0.2, galangal: 0.15 },
+      story: 'Nasi lemak is coconut rice with all the trimmings: crispy anchovies, peanuts, egg, cucumber and a sambal that does the talking. Breakfast, lunch or midnight, it’s always welcome.',
+      art: { type: 'nasilemak' }
+    },
+    {
+      id: 'roticanai', name: 'Roti canai & dhal', origin: 'Malaysia', flag: '🇲🇾',
+      subtitle: 'Flaky, friendly and fun to watch in action.',
+      spices: { cumin: 0.2, coriander: 0.2, fennel: 0.2, turmeric: 0.15, cardamom: 0.1, cinnamon: 0.1, mustard: 0.05 },
+      story: 'Roti canai is spun, flipped and slapped on the griddle with a bit of showmanship, then torn and dunked in dhal. Simple, sociable and best shared at a mamak stall.',
+      art: { type: 'roticanai' }
+    },
+    {
+      id: 'satay', name: 'Satay', origin: 'Malaysia & Indonesia', flag: '🇲🇾🇮🇩',
+      subtitle: 'Golden, sociable and always the first plate empty.',
+      spices: { turmeric: 0.3, coriander: 0.25, cumin: 0.2, fennel: 0.15, galangal: 0.1 },
+      story: 'Satay is turmeric-gold, charred over coals and dragged through peanut sauce. Small skewers, big following: nobody ever orders just one.',
+      art: { type: 'satay' }
+    },
+    {
+      id: 'nasigoreng', name: 'Nasi goreng', origin: 'Indonesia', flag: '🇮🇩',
+      subtitle: 'Resourceful, hearty and ready for anything.',
+      spices: { chilli: 0.45, coriander: 0.2, blackpepper: 0.15, galangal: 0.1, turmeric: 0.1 },
+      story: 'Nasi goreng turns yesterday’s rice into something everyone wants, crowned with a fried egg. No plan needed, just a hot wok and good instincts.',
+      art: { type: 'nasigoreng' }
+    },
+    {
+      id: 'sotoayam', name: 'Soto ayam', origin: 'Indonesia', flag: '🇮🇩',
+      subtitle: 'Sunny, soothing and good for the soul.',
+      spices: { turmeric: 0.3, galangal: 0.2, ginger: 0.2, coriander: 0.15, blackpepper: 0.15 },
+      story: 'Soto ayam is a golden turmeric chicken soup that every Indonesian family makes their own way. Bright, restoring and the first thing you want when you’re run down.',
+      art: { type: 'bowl', broth: '#F2B830', noodles: true, toppings: ['chicken', 'egg', 'friedOnion', 'lime', 'herbs'] }
+    },
+    {
+      id: 'amok', name: 'Fish amok', origin: 'Cambodia', flag: '🇰🇭',
+      subtitle: 'Gentle, fragrant and quietly refined.',
+      spices: { galangal: 0.35, turmeric: 0.3, chilli: 0.2, ginger: 0.15 },
+      story: 'Amok is fish steamed in coconut and kroeung paste inside a little banana-leaf cup until it sets like a soft custard. Delicate, fragrant and made with real care.',
+      art: { type: 'amok' }
+    },
+    {
+      id: 'loklak', name: 'Lok lak', origin: 'Cambodia', flag: '🇰🇭',
+      subtitle: 'Straight-talking, zesty and peppery.',
+      spices: { blackpepper: 0.6, chilli: 0.2, ginger: 0.2 },
+      story: 'Lok lak is seared beef on crisp lettuce and tomato, with a fried egg and a dipping sauce of lime and Kampot pepper. Simple, sharp and exactly what it says.',
+      art: { type: 'loklak' }
+    },
+    {
+      id: 'samlormachu', name: 'Samlor machu', origin: 'Cambodia', flag: '🇰🇭',
+      subtitle: 'Sour, bright and full of life.',
+      spices: { tamarind: 0.4, galangal: 0.25, chilli: 0.2, turmeric: 0.15 },
+      story: 'Samlor machu is a sweet-sour Khmer soup of tamarind, fish, pineapple and herbs. It wakes up every taste bud and makes a family meal feel lively.',
+      art: { type: 'bowl', broth: '#E59A3C', noodles: false, toppings: ['fish', 'pineapple', 'tomato', 'herbs', 'chilli'] }
+    },
 
     /* ---------- South Asia ---------- */
     {
@@ -135,6 +233,69 @@
       spices: { chilli: 0.3, cumin: 0.15, blackpepper: 0.15, mustard: 0.1, cloves: 0.1, cinnamon: 0.1, turmeric: 0.1 },
       story: 'Vindaloo has a reputation, but it’s more than heat. Vinegar, garlic and warm spices give it a tangy depth that rewards anyone brave enough to dig in.',
       art: { type: 'kadai' }
+    },
+    {
+      id: 'roganjosh', name: 'Rogan josh', origin: 'Kashmir, India', flag: '🇮🇳',
+      subtitle: 'Deep, warm and richer than it lets on.',
+      spices: { fennel: 0.25, ginger: 0.2, chilli: 0.2, cardamom: 0.15, cloves: 0.1, cinnamon: 0.1 },
+      story: 'Rogan josh gets its deep red from mild Kashmiri chilli, not fire. Slow-cooked lamb, fennel and ginger make it warming rather than wild.',
+      art: { type: 'bowl', rim: '#E0A050', band: '#8A4A1E', broth: '#9A1E14', noodles: false, toppings: ['stewBeef', 'redOil', 'stewBeef', 'stewBeef', 'herbs'] }
+    },
+    {
+      id: 'chole', name: 'Chole bhature', origin: 'Punjab, India', flag: '🇮🇳',
+      subtitle: 'Big-hearted, hearty and fun to share.',
+      spices: { coriander: 0.2, cumin: 0.2, chilli: 0.15, cardamom: 0.1, cinnamon: 0.1, cloves: 0.1, fenugreek: 0.1, turmeric: 0.05 },
+      story: 'Chole bhature is spiced chickpeas with a puffed-up bread that arrives like a balloon. Loud, generous and best eaten with friends on a weekend.',
+      art: { type: 'chole' }
+    },
+    {
+      id: 'dosa', name: 'Masala dosa', origin: 'South India', flag: '🇮🇳',
+      subtitle: 'Crisp, light and cleverly put together.',
+      spices: { mustard: 0.3, turmeric: 0.25, chilli: 0.2, fenugreek: 0.15, cumin: 0.1 },
+      story: 'Masala dosa is a huge, paper-thin crêpe wrapped around spiced potato, with chutneys and sambar alongside. Light, crisp and a lot more skill than it lets on.',
+      art: { type: 'dosa' }
+    },
+    {
+      id: 'nihari', name: 'Nihari', origin: 'Pakistan', flag: '🇵🇰',
+      subtitle: 'Slow, steady and deeply satisfying.',
+      spices: { ginger: 0.2, fennel: 0.15, cardamom: 0.15, cloves: 0.1, cinnamon: 0.1, blackpepper: 0.1, nutmeg: 0.1, chilli: 0.1 },
+      story: 'Nihari cooks overnight so it’s ready at dawn, a rich, silky stew topped with ginger, chilli and lemon. Worth the wait, and the people who make it know it.',
+      art: { type: 'bowl', band: '#2E8F6A', broth: '#7A3416', noodles: false, toppings: ['stewBeef', 'gingerShreds', 'redOil', 'stewBeef', 'greenChilli'] }
+    },
+    {
+      id: 'karahi', name: 'Chicken karahi', origin: 'Pakistan', flag: '🇵🇰',
+      subtitle: 'Fast, fiery and made to share.',
+      spices: { chilli: 0.3, cumin: 0.2, coriander: 0.2, blackpepper: 0.15, ginger: 0.15 },
+      story: 'Karahi is cooked fast over a roaring flame and served in the same wok it was made in. Tomato, ginger and green chilli, straight to the table while it’s still sizzling.',
+      art: { type: 'kadai', sauce: '#C8401E', glaze: '#E8642E', meat: 'chicken', garnish: 'ginger' }
+    },
+    {
+      id: 'chapli', name: 'Chapli kebab', origin: 'Peshawar, Pakistan', flag: '🇵🇰',
+      subtitle: 'Bold, rustic and full of crunch.',
+      spices: { coriander: 0.4, cumin: 0.2, chilli: 0.2, blackpepper: 0.1, ginger: 0.1 },
+      story: 'Chapli kebabs are flat, crisp-edged patties packed with crushed coriander seed and pomegranate, fried in a huge pan in Peshawar’s bazaars. Rough round the edges, in a good way.',
+      art: { type: 'chapli' }
+    },
+    {
+      id: 'kottu', name: 'Kottu roti', origin: 'Sri Lanka', flag: '🇱🇰',
+      subtitle: 'Noisy, energetic and endlessly fun.',
+      spices: { coriander: 0.25, cumin: 0.2, chilli: 0.2, fennel: 0.15, cinnamon: 0.1, cardamom: 0.1 },
+      story: 'You hear kottu before you see it: the clatter of metal blades chopping roti, egg and vegetables on a hot griddle. It’s street food with a soundtrack.',
+      art: { type: 'kottu' }
+    },
+    {
+      id: 'ambulthiyal', name: 'Fish ambul thiyal', origin: 'Sri Lanka', flag: '🇱🇰',
+      subtitle: 'Sharp, peppery and built to last.',
+      spices: { blackpepper: 0.45, chilli: 0.15, ginger: 0.15, turmeric: 0.15, cardamom: 0.1 },
+      story: 'Ambul thiyal is tuna cooked dry and dark with black pepper and sour goraka in a clay pot, a recipe made to keep for days. Tangy, peppery and resourceful.',
+      art: { type: 'ambulthiyal' }
+    },
+    {
+      id: 'hoppers', name: 'Egg hoppers', origin: 'Sri Lanka', flag: '🇱🇰',
+      subtitle: 'Light, crisp and sweet with a kick.',
+      spices: { chilli: 0.35, cinnamon: 0.25, cardamom: 0.15, cloves: 0.15, blackpepper: 0.1 },
+      story: 'A hopper is a bowl-shaped pancake, lacy and crisp at the edges, soft in the middle, with an egg cooked right in it. Add sweet-spicy seeni sambol and it’s a joy.',
+      art: { type: 'hoppers' }
     },
 
     /* ---------- Middle East & Africa ---------- */

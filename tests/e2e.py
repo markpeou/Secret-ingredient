@@ -230,7 +230,7 @@ with sync_playwright() as p:
 
     # A card renders for every dish
     failed = page.evaluate("""async()=>{ const seen={}, bad=[]; let seed=5; const r=()=>((seed=(seed*1664525+1013904223)>>>0)/4294967296);
-      for(let i=0;i<4000 && Object.keys(seen).length<SI.DISHES.length;i++){ const qs=SI.engine.selectQuestions(10,r);
+      for(let i=0;i<20000 && Object.keys(seen).length<SI.DISHES.length;i++){ const qs=SI.engine.selectQuestions(10,r);
         const res=SI.engine.interpret(qs.map(q=>({questionId:q.id,optionIndex:Math.floor(r()*q.options.length)})));
         if(seen[res.dish.id]) continue; seen[res.dish.id]=1;
         try{ const c=await SI.card.render(res); if(c.front.blob.size<20000||c.back.blob.size<20000) bad.push(res.dish.id+' tiny'); }catch(e){ bad.push(res.dish.id+': '+e.message); } }

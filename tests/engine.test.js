@@ -94,10 +94,12 @@ test('overviews vary between participants', () => {
 test('every dish is reachable and none dominates', () => {
   const counts = {};
   SAMPLE.forEach(({ r }) => { counts[r.dish.id] = (counts[r.dish.id] || 0) + 1; });
+  // Relative to an even share, so the bounds keep their meaning as the dish bank grows.
+  const even = 1 / SI.DISHES.length;
   SI.DISHES.forEach((d) => {
     const f = (counts[d.id] || 0) / SAMPLE.length;
-    assert.ok(f > 0.01, `${d.id} too rare: ${f}`);
-    assert.ok(f < 0.08, `${d.id} too common: ${f}`);
+    assert.ok(f > even * 0.5, `${d.id} too rare: ${f}`);
+    assert.ok(f < even * 4, `${d.id} too common: ${f}`);
   });
 });
 
