@@ -193,7 +193,7 @@
     {
       id: 'loklak', name: 'Lok lak', origin: 'Cambodia', flag: '🇰🇭',
       subtitle: 'Straight-talking, zesty and peppery.',
-      spices: { blackpepper: 0.6, chilli: 0.2, ginger: 0.2 },
+      spices: { blackpepper: 0.55, sesame: 0.25, chilli: 0.2 },
       story: 'Lok lak is seared beef on crisp lettuce and tomato, with a fried egg and a dipping sauce of lime and Kampot pepper. Simple, sharp and exactly what it says.',
       art: { type: 'loklak' }
     },
@@ -203,6 +203,20 @@
       spices: { tamarind: 0.4, galangal: 0.25, chilli: 0.2, turmeric: 0.15 },
       story: 'Samlor machu is a sweet-sour Khmer soup of tamarind, fish, pineapple and herbs. It wakes up every taste bud and makes a family meal feel lively.',
       art: { type: 'bowl', broth: '#E59A3C', noodles: false, toppings: ['fish', 'pineapple', 'tomato', 'herbs', 'chilli'] }
+    },
+    {
+      id: 'peppercrab', name: 'Kampot pepper crab', origin: 'Kep, Cambodia', flag: '🇰🇭',
+      subtitle: 'Bold, unhurried and worth getting messy for.',
+      spices: { blackpepper: 0.7, chilli: 0.15, ginger: 0.15 },
+      story: 'In Kep, crabs come straight off the boats and into the wok with fresh green Kampot peppercorns. It’s a hands-on, crack-it-yourself meal that nobody rushes.',
+      art: { type: 'crab' }
+    },
+    {
+      id: 'nombanhchok', name: 'Nom banh chok', origin: 'Cambodia', flag: '🇰🇭',
+      subtitle: 'Fresh, gentle and a lovely way to start the day.',
+      spices: { galangal: 0.4, turmeric: 0.3, ginger: 0.3 },
+      story: 'Nom banh chok is Cambodia’s breakfast: soft rice noodles under a fragrant green-gold fish curry, piled with banana blossom, cucumber and fresh herbs. Sold from baskets at dawn and gone by mid-morning.',
+      art: { type: 'bowl', broth: '#C9C25A', noodles: true, noodleColour: '#FFFBF0', toppings: ['fish', 'herbs', 'cucumber', 'sprouts', 'basil'] }
     },
 
     /* ---------- South Asia ---------- */

@@ -136,7 +136,7 @@
       <rect x="78" y="164" width="44" height="10" rx="4" fill="${rim}" ${O}/>
       <ellipse cx="100" cy="100" rx="78" ry="24" fill="${rim}" ${O}/>
       <ellipse cx="100" cy="102" rx="67" ry="17" fill="${art.broth}"/>
-      ${art.noodles ? noodles() : ''}
+      ${art.noodles ? noodles(art.noodleColour) : ''}
       ${tops}`;
   }
 
@@ -1011,10 +1011,33 @@
       ${[[102, 144], [108, 142], [114, 146], [106, 148]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.3" fill="#FFF3DC"/>`).join('')}`;
   }
 
+  function crab() {
+    // A whole crab wok-tossed with sprigs of fresh green Kampot peppercorns.
+    const leg = (sx, y, k) => { const d = `M${sx * 24} ${y} L${sx * (44 + k)} ${y - 8} L${sx * (58 + k)} ${y + 6}`;
+      return `<path d="${d}" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#D8462A" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>`; };
+    const claw = (sx) => { const arm = `M${sx * 16} -12 L${sx * 30} -22 L${sx * 30} -30`;
+      return `<path d="${arm}" fill="none" stroke="${INK}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="${arm}" fill="none" stroke="#D8462A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <g transform="translate(${sx * 28} -38) rotate(${sx * -20})"><path d="M-9 8 Q-14 -6 -4 -14 L0 -6 L4 -14 Q14 -6 9 8 Q0 13 -9 8 Z" fill="#E0502A" ${ow(2.4)}/><path d="M-4 -12 L-2 -16 M4 -12 L2 -16" stroke="#3A1A10" stroke-width="2.4" stroke-linecap="round"/></g>`; };
+    const sprig = (x, y, r) => `<g ${at(x, y, r)}><path d="M-16 0 Q0 -4 16 0" fill="none" stroke="#4E7A2A" stroke-width="2" stroke-linecap="round"/>
+      ${[-12, -7, -2, 3, 8, 13].map((cx, i) => `<circle cx="${cx}" cy="${i % 2 ? 3 : -3}" r="3.2" fill="#5E9A32" ${ow(1.3)}/><circle cx="${cx - 1}" cy="${(i % 2 ? 3 : -3) - 1}" r="1" fill="#A8D86A"/>`).join('')}</g>`;
+    const body = `<g transform="translate(100 118) scale(1 .82)">
+      ${[-1, 1].map((sx) => leg(sx, -2, 0) + leg(sx, 6, 4) + leg(sx, 14, 2) + leg(sx, 20, -4)).join('')}
+      ${claw(-1)}${claw(1)}
+      <ellipse rx="34" ry="22" fill="#E0502A" ${O}/>
+      <path d="M-24 -6 Q-4 -18 20 -10" fill="none" stroke="#F49A6A" stroke-width="4" stroke-linecap="round"/>
+      <path d="M-10 6 Q0 10 10 6" fill="none" stroke="#A8301A" stroke-width="2.4" stroke-linecap="round"/>
+      ${scatter(16, 0, 2, 26, 15).map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.5" fill="#2E2826"/>`).join('')}
+      <circle cx="-7" cy="-21" r="2.6" fill="${INK}"/><circle cx="7" cy="-21" r="2.6" fill="${INK}"/></g>`;
+    return `${steam()}${plateShell()}
+      <ellipse cx="100" cy="128" rx="62" ry="17" fill="#6A3A1A" opacity=".85"/>
+      ${body}
+      ${sprig(58, 138, -15)}${sprig(144, 136, 20)}${sprig(120, 148, -5)}${T.spring(64, 112)}`;
+  }
+
   function dish(d) {
     const a = d.art;
     const draw = { bowl: () => bowl(a), plate: () => plate(a), tacos, tagine, banhmi, hotpot, bibimbap, pan, wrap, injera, lasagne: () => lasagne(a), paella, roast, buns, churros, pie, pizza, flatbread, ramekin, empanadas, ceviche, fattoush, koshari, suya, larb, sholehzard, handi, katori, kadai: () => kadai(a),
-      mapo, dandan, charsiu, hongshao, teaeggs, nasilemak, roticanai, satay, nasigoreng, amok, loklak, chole, dosa, chapli, kottu, ambulthiyal, hoppers,
+      mapo, dandan, charsiu, hongshao, teaeggs, nasilemak, roticanai, satay, nasigoreng, amok, loklak, chole, dosa, chapli, kottu, ambulthiyal, hoppers, crab,
       roganjosh: () => bowl(a), nihari: () => bowl(a) }[a.type];
     if (!draw) throw new Error('No illustration for ' + d.id);
     const body = draw();
